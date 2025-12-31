@@ -1,0 +1,112 @@
+:root {
+  --primary: #0070f3;
+  --primary-hover: #0056b3;
+  
+  /* Two-tone backgrounds (Light) */
+  --bg-odd: #ffffff;
+  --bg-even: #f4f5f7; /* hellgrau */
+
+  --text: #111111;
+  --muted: rgba(17, 17, 17, 0.75);
+
+  --card-bg: #ffffff;
+  --card-border: rgba(17, 17, 17, 0.10);
+
+  --transition: all 0.3s ease;
+}
+
+/* Darkmode overrides */
+html.dark body {
+  --bg-odd: #0a0a0a;   /* schwarz */
+  --bg-even: #161616;  /* anthrazit */
+
+  --text: #ededed;
+  --muted: rgba(237, 237, 237, 0.75);
+
+  --card-bg: #161616;
+  --card-border: rgba(237, 237, 237, 0.12);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  transition: var(--transition);
+  overflow-x: hidden;
+  color: var(--text);
+  background: var(--bg-odd);
+}
+
+.uk-text-lead, .uk-text-meta, .uk-text-small, .microcopy { color: var(--muted); }
+
+/* Stripe sections */
+.mw-section { background: var(--bg-odd); transition: background 0.3s ease; }
+.mw-section.mw-alt { background: var(--bg-even); }
+
+/* Neutralize UIkit muted background so it doesn't fight stripes */
+.uk-section-muted { background: transparent !important; }
+
+/* Darkmode Styles for UIkit components */
+html.dark .uk-navbar-container,
+html.dark .uk-offcanvas-bar,
+html.dark .uk-modal-dialog {
+  background-color: var(--bg-even) !important;
+  color: var(--text) !important;
+}
+
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark .uk-navbar-nav > li > a { color: #fff !important; }
+html.dark .uk-button-default { color: #fff; border-color: #444; }
+html.dark .uk-accordion-title { color: #fff; }
+
+/* Custom UI Adjustments */
+.uk-navbar { border-bottom: 1px solid rgba(0,0,0,0.05); }
+html.dark .uk-navbar { border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.hero-section {
+  padding: 100px 0;
+  background: radial-gradient(circle at top right, rgba(0,112,243,0.05) 0%, transparent 40%);
+}
+
+.microcopy { font-size: 0.75rem; display: block; margin-top: 5px; opacity: 0.8; }
+
+.badge-foerder {
+  background: #e6f2ff;
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+html.dark .badge-foerder { background: rgba(0,112,243,0.2); color: #4da3ff; }
+
+.price-card { border-radius: 12px; transition: var(--transition); display: flex; flex-direction: column; }
+.price-card:hover { transform: translateY(-5px); }
+
+/* Cards consistent */
+.uk-card-default {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border);
+  color: var(--text) !important;
+}
+
+.toggle-container { display: flex; align-items: center; gap: 15px; }
+.lang-toggle, .theme-toggle {
+  cursor: pointer; padding: 5px 10px; border-radius: 6px; border: 1px solid #ddd;
+  font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+}
+html.dark .lang-toggle, html.dark .theme-toggle { border-color: #444; }
+
+.sticky-nav { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); }
+html.dark .sticky-nav { background: rgba(10,10,10,0.8); }
+
+#contact-success { display: none; }
+
+/* Star Ratings */
+.star-rating { color: #ffcc00; margin-bottom: 5px; }
+
+/* Why Us Section Icons */
+.trust-icon { color: var(--primary); margin-bottom: 15px; }
+
+/* Themed Image Container */
+.img-container-aspect { position: relative; width: 100%; padding-top: 66.66%; overflow: hidden; border-radius: 8px; }
+.img-container-aspect img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
