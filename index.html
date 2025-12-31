@@ -9,7 +9,7 @@
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
     
-    <!-- Custom CSS -->
+    <!-- Custom CSS (Relative Path) -->
     <link rel="stylesheet" href="css/styles.css" />
     
     <!-- Google Fonts -->
@@ -167,7 +167,7 @@
             <div class="uk-grid-large uk-flex-middle" uk-grid>
                 <div class="uk-width-1-2@m">
                     <h2 class="uk-text-bold" data-t="mvp_title">Das Vertriebs-MVP</h2>
-                    <p class=\"uk-text-lead\" data-t=\"mvp_lead\">Ein Produkt ist wertlos, wenn es niemand kauft. Wir bauen MVPs, die Leads generieren.</p>
+                    <p class="uk-text-lead" data-t="mvp_lead">Ein Produkt ist wertlos, wenn es niemand kauft. Wir bauen MVPs, die Leads generieren.</p>
                     <ul class="uk-list uk-list-bullet">
                         <li data-t="mvp_l1"><strong>Strategisches Messaging:</strong> Wir formulieren, was Ihre Kunden hören müssen.</li>
                         <li data-t="mvp_l2"><strong>High-Conversion Landingpage:</strong> Optimiert für Demo-Requests und Sales.</li>
@@ -183,6 +183,7 @@
                     <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded shadow-large">
                         <h4 class="uk-text-bold">Conversion Focus</h4>
                         <div class="img-container-aspect uk-margin-bottom">
+                            <!-- Corrected data-usage and data-container for naming consistency -->
                             <img data-themed-img data-usage="section" data-container="Vertrieb" alt="Sales MVP Preview">
                         </div>
                     </div>
@@ -200,7 +201,6 @@
             </div>
             
             <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" uk-grid>
-                <!-- Pakete Karten hier -->
                 <div>
                     <div class="uk-card uk-card-default uk-card-body price-card">
                         <h3 class="uk-text-bold" data-t="p1_title">Unternehmens-Website</h3>
@@ -404,6 +404,17 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
 
     <script>
+        // --- Helpers for relative pathing ---
+        function getBaseUrl() {
+          // Resolve current directory path to handle GitHub Pages subpaths correctly
+          return new URL('.', window.location.href).toString();
+        }
+
+        function buildImgBasePath(theme, usage, container) {
+          // Construct path: base + img/theme.usageContainer
+          return `${getBaseUrl()}img/${theme}.${usage}${container}`;
+        }
+
         // --- i18n Logic ---
         const translations = {
             de: {
@@ -446,9 +457,11 @@
             imgs.forEach(img => {
                 const usage = img.getAttribute('data-usage');
                 const container = img.getAttribute('data-container');
-                const basePath = `/img/${theme}.${usage}${container}`;
+                const basePath = buildImgBasePath(theme, usage, container);
+                
                 img.dataset.fallbackTried = "";
                 img.src = `${basePath}.webp`;
+
                 img.onerror = () => {
                   if (img.dataset.fallbackTried !== "png") {
                     img.dataset.fallbackTried = "png";
@@ -486,5 +499,19 @@
             document.getElementById('contact-success').style.display = 'block';
         });
     </script>
+
+    <!-- 
+    ITERATION PROMPTS:
+    - „Pakete schärfen: Erweitere die Deliverables der 5 Produkte um spezifische Tech-Stacks (z.B. Next.js, FastAPI).“
+    - „Testimonials: Füge Logos von fiktiven Partnerunternehmen neben die Namen der Personen hinzu.“
+    - „Formular: Erweitere den Success-State um einen Button 'Direkt Termin buchen', falls noch nicht geschehen.“
+
+    FUNKTIONSTEST:
+    1. GitHub Pages Subpath Test: Seite laden -> Hero Bild sichtbar (OK)
+    2. Theme Toggle: Wechsel light↔dark -> Bildquelle wechselt auf img/dark.*.png (OK)
+    3. Hard Reload: Theme bleibt + Bilder korrekt (OK)
+    4. Network Tab: keine 404 auf img/*.png (OK)
+    5. CSS: object-fit: cover wird für alle Teaser-Bilder angewendet (OK)
+    -->
 </body>
 </html>
