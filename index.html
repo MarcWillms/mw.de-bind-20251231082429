@@ -22,7 +22,7 @@
     <!-- Navigation -->
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 100">
         <nav class="uk-navbar-container sticky-nav" uk-navbar>
-            <div class="uk-navbar-left uk-margin-left">
+            <div class=\"uk-navbar-left uk-margin-left\">
                 <a class="uk-navbar-item uk-logo uk-text-bold" href="#">
                     <span style="color: var(--primary)">Studio</span>.mw
                 </a>
@@ -108,7 +108,7 @@
     </section>
 
     <!-- Leistungen -->
-    <section id="leistungen" class="uk-section uk-section-muted mw-section">
+    <section id="leistungen" class="uk-section mw-section">
         <div class="uk-container">
             <div class="uk-text-center uk-margin-large-bottom">
                 <h2 class="uk-text-bold" data-t="services_title">Unsere Expertise</h2>
@@ -118,42 +118,42 @@
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <span uk-icon="icon: code; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold" data-t="s1_title">Development Packages</h3>
+                        <h3 class="uk-card-title uk-text-bold"><span data-t="s1_title">Development Packages</span></h3>
                         <p data-t="s1_desc">Vordefinierte Bausteine für schnellen Fortschritt ohne Rätselraten.</p>
                     </div>
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <span uk-icon="icon: paint-bucket; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold" data-t="s2_title">High-End Frontend</h3>
+                        <h3 class="uk-card-title uk-text-bold"><span data-t="s2_title">High-End Frontend</span></h3>
                         <p data-t="s2_desc">Schnelle, responsive Interfaces mit modernen Frameworks (Next.js/React).</p>
                     </div>
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <span uk-icon="icon: database; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold" data-t="s3_title">Scalable Backend</h3>
+                        <h3 class="uk-card-title uk-text-bold"><span data-t="s3_title">Scalable Backend</span></h3>
                         <p data-t="s3_desc">Sichere Server-Logik und API-Architekturen, die mit Ihren Nutzern wachsen.</p>
                     </div>
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: microchip; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold" data-t="s4_title">AI Tooling</h3>
+                        <span uk-icon="icon: cog; ratio: 2" class="uk-margin-bottom trust-icon"></span>
+                        <h3 class="uk-card-title uk-text-bold"><span data-t="s4_title">AI Tooling</span></h3>
                         <p data-t="s4_desc">Eigene KI-Interfaces für spezifische Anwendungsfälle in Ihrem Unternehmen.</p>
                     </div>
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
                         <span uk-icon="icon: settings; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold" data-t="s5_title">Automation Pipelines</h3>
+                        <h3 class="uk-card-title uk-text-bold"><span data-t="s5_title">Automation Pipelines</span></h3>
                         <p data-t="s5_desc">Lead-Qualifizierung, CRM-Workflows und Prozess-Automatisierung mit KI.</p>
                     </div>
                 </div>
                 <div>
                     <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: trending-up; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold" data-t="s6_title">Growth & Iteration</h3>
+                        <span uk-icon="icon: refresh; ratio: 2" class="uk-margin-bottom trust-icon"></span>
+                        <h3 class="uk-card-title uk-text-bold"><span data-t="s6_title">Growth & Iteration</span></h3>
                         <p data-t="s6_desc">Kontinuierliche Verbesserung Ihres Produkts basierend auf echtem Nutzerfeedback.</p>
                     </div>
                 </div>
@@ -183,7 +183,6 @@
                     <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded shadow-large">
                         <h4 class="uk-text-bold">Conversion Focus</h4>
                         <div class="img-container-aspect uk-margin-bottom">
-                            <!-- Corrected data-usage and data-container for naming consistency -->
                             <img data-themed-img data-usage="section" data-container="Vertrieb" alt="Sales MVP Preview">
                         </div>
                     </div>
@@ -193,18 +192,20 @@
     </section>
 
     <!-- Pakete & Preise -->
-    <section id="pakete" class="uk-section uk-section-muted mw-section">
+    <section id="pakete" class="uk-section mw-section">
         <div class="uk-container">
-            <div class="uk-text-center uk-margin-large-bottom">
+            <div class=\"uk-text-center uk-margin-large-bottom\">
                 <h2 class="uk-text-bold" data-t="pricing_title">Klare Pakete, volle Transparenz</h2>
                 <p data-t="pricing_sub">Wählen Sie das Fundament für Ihre nächste Ausbaustufe.</p>
             </div>
             
             <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" uk-grid>
+                <!-- Paket 1: Website -->
                 <div>
                     <div class="uk-card uk-card-default uk-card-body price-card">
                         <h3 class="uk-text-bold" data-t="p1_title">Unternehmens-Website</h3>
                         <div class="uk-text-h4 uk-text-bold">999 €</div>
+                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p1_sub">In wenigen Tagen professionell online – ohne Overhead.</p>
                         <p class="uk-text-small" data-t="p1_ideal">Ideal für KMU & Freelancer</p>
                         <hr>
                         <ul class="uk-list uk-list-divider uk-text-small" data-t="p1_list">
@@ -219,11 +220,13 @@
                         </div>
                     </div>
                 </div>
+                <!-- Paket 2: Sales Landing -->
                 <div>
                     <div class="uk-card uk-card-default uk-card-body price-card">
-                        <div class="badge-foerder" data-t="foerder_badge">Förderfähig? Ja*</div>
+                        <div class="badge-foerder" data-t="p2_foerder">Förderfähig möglich*</div>
                         <h3 class="uk-text-bold" data-t="p2_title">Sales-Landingpage</h3>
                         <div class="uk-text-h4 uk-text-bold">2.499 €</div>
+                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p2_sub">Mehr Demo-Requests durch klare Botschaft + Tracking.</p>
                         <p class="uk-text-small" data-t="p2_ideal">Ideal für Lead-Gen & Vertrieb</p>
                         <hr>
                         <ul class="uk-list uk-list-divider uk-text-small" data-t="p2_list">
@@ -238,28 +241,75 @@
                         </div>
                     </div>
                 </div>
+                <!-- Paket 3: MVP (Featured) -->
                 <div>
-                    <div class="uk-card uk-card-primary uk-card-body price-card" style="background: var(--primary); color: white;">
+                    <div class="uk-card uk-card-primary uk-card-body price-card price-card-featured" style="background: var(--primary); color: white;">
                         <div class="badge-foerder" style="background: white; color: var(--primary);" data-t="featured_badge">Most Popular</div>
                         <h3 class="uk-text-bold" style="color: white !important" data-t="p3_title">MVP (Web-App)</h3>
                         <div class="uk-text-h4 uk-text-bold">9.999 €</div>
-                        <p class="uk-text-small" data-t="p3_ideal">Ideal für Startups & Validierung</p>
+                        <p class="uk-text-small uk-text-bold" data-t="p3_sub">Go-to-Market in 2–6 Wochen – gebaut für Vertrieb & Feedback.</p>
+                        <p class="uk-text-small" data-t="p3_why">Bestes Preis/Leistung für schnelle Validierung.</p>
                         <hr>
                         <ul class="uk-list uk-list-divider uk-text-small" data-t="p3_list">
-                            <li>Fullstack-Architektur</li>
-                            <li>User Auth & Database</li>
+                            <li>Fullstack-Architektur & Auth</li>
+                            <li>Skalierbare Datenbank</li>
                             <li>Core Product Features</li>
-                            <li>Inkl. Sales-Landing Elements</li>
-                            <li>Timeline: 4-6 Wochen</li>
+                            <li>Admin/Backoffice light</li>
+                            <li>Inkl. Analytics & Events</li>
                         </ul>
+                        <p class="uk-text-meta uk-margin-small-top" style="color: rgba(255,255,255,0.8)" data-t="p3_risk">Fixpreis, klarer Scope – Erweiterungen optional.</p>
                         <div class="uk-margin-auto-top">
                             <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-default uk-width-1-1" style="background: white; color: var(--primary); border: none;">
                                 <span uk-icon="calendar"></span>
                                 <span class="uk-margin-small-left" data-t="p3_cta">MVP-Call buchen</span>
                             </a>
+                            <span class="microcopy uk-text-center" style="color: white" data-t="meet_micro_short">Google Meet Einwahl automatisch.</span>
                         </div>
                     </div>
                 </div>
+                <!-- Paket 4: AI Automation -->
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body price-card">
+                        <h3 class="uk-text-bold" data-t="p4_title">AI Automation</h3>
+                        <div class="uk-text-h4 uk-text-bold">ab 9.999 €</div>
+                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p4_sub">Spart Zeit, reduziert Fehler, macht Prozesse messbar.</p>
+                        <p class="uk-text-small" data-t="p4_ideal">Ideal für Prozess-Optimierung</p>
+                        <hr>
+                        <ul class="uk-list uk-list-divider uk-text-small" data-t="p4_list">
+                            <li>Custom AI Agents / Workflows</li>
+                            <li>API-Integrationen (Zapier/n8n)</li>
+                            <li>Fehler-Logging & Monitoring</li>
+                            <li>Handover & Team Training</li>
+                            <li>Timeline: 3-5 Wochen</li>
+                        </ul>
+                        <p class="uk-text-meta uk-margin-small-top" data-t="p4_risk">Ab-Preis je nach Integrationen & Datenlage.</p>
+                        <div class="uk-margin-auto-top">
+                            <a href="#kontakt" class="uk-button uk-button-default uk-width-1-1" data-t="p4_cta">Audit vereinbaren</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Paket 5: Hosting -->
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body price-card">
+                        <h3 class="uk-text-bold" data-t="p5_title">Hosting & Betrieb</h3>
+                        <div class="uk-text-h4 uk-text-bold">ab 99 €/Monat</div>
+                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p5_sub">Sorgenfreier Betrieb – Updates, Backups, Monitoring.</p>
+                        <hr>
+                        <ul class="uk-list uk-list-divider uk-text-small">
+                            <li><strong data-t="p5_l1_h">Monitoring:</strong> <span data-t="p5_l1_t">24/7 Uptime-Checks & Health</span></li>
+                            <li><strong data-t="p5_l2_h">Backups:</strong> <span data-t="p5_l2_t">Täglich, 14 Tage Retention</span></li>
+                            <li><strong data-t="p5_l3_h">Security:</strong> <span data-t="p5_l3_t">SSL, Hardening & Patches</span></li>
+                            <li><strong data-t="p5_l4_h">Updates:</strong> <span data-t="p5_l4_t">Wartungsfenster & Rollback</span></li>
+                            <li><strong data-t="p5_l5_h">Support:</strong> <span data-t="p5_l5_t">Reaktion < 1 Werktag</span></li>
+                        </ul>
+                        <div class="uk-margin-auto-top">
+                            <a href="#kontakt" class="uk-button uk-button-default uk-width-1-1" data-t="p5_cta">Hosting-Setup besprechen</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-text-center uk-margin-large-top">
+                <p class="uk-text-meta" data-t="retainer_info">Optional Retainer: „Growth & Iteration“ ab 1.200 €/Monat für kontinuierliche Entwicklung.</p>
             </div>
         </div>
     </section>
@@ -302,7 +352,7 @@
     </section>
 
     <!-- Förder-Check -->
-    <section id="foerder" class="uk-section uk-section-muted mw-section">
+    <section id="foerder" class="uk-section mw-section">
         <div class="uk-container">
             <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-border-rounded uk-overflow-hidden shadow-large" uk-grid>
                 <div class="uk-card-media-left">
@@ -333,7 +383,7 @@
                 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
                     <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
                         <li>
-                            <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+                            <div class=\"uk-card uk-card-default uk-card-body uk-border-rounded\">
                                 <div class="star-rating">★★★★★ 5.0</div>
                                 <p>"In nur 3 Wochen hatten wir ein funktionierendes Sales-Dashboard. Die Geschwindigkeit ist beeindruckend."</p>
                                 <hr>
@@ -357,7 +407,7 @@
     </section>
 
     <!-- Kontakt -->
-    <section id="kontakt" class="uk-section uk-section-muted mw-section">
+    <section id="kontakt" class="uk-section mw-section">
         <div class="uk-container">
             <div class="uk-grid-large" uk-grid>
                 <div class="uk-width-1-2@m">
@@ -404,16 +454,9 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
 
     <script>
-        // --- Helpers for relative pathing ---
-        function getBaseUrl() {
-          // Resolve current directory path to handle GitHub Pages subpaths correctly
-          return new URL('.', window.location.href).toString();
-        }
-
-        function buildImgBasePath(theme, usage, container) {
-          // Construct path: base + img/theme.usageContainer
-          return `${getBaseUrl()}img/${theme}.${usage}${container}`;
-        }
+        // --- Helpers ---
+        function getBaseUrl() { return new URL('.', window.location.href).toString(); }
+        function buildImgBasePath(theme, usage, container) { return `${getBaseUrl()}img/${theme}.${usage}${container}`; }
 
         // --- i18n Logic ---
         const translations = {
@@ -423,10 +466,14 @@
                 hero_subtitle: "Wir entwickeln High-Performance Lösungen für KMU & Startups. Launchbereit in 2–6 Wochen.",
                 cta_book: "Termin buchen", cta_grant: "Kostenloser Förder-Check", cta_project: "Projekt anfragen",
                 meet_micro: "Termin via Google Meet – Einwahldaten kommen automatisch per E-Mail.",
-                p1_title: "Unternehmens-Website", p2_title: "Sales-Landingpage", p3_title: "MVP (Web-App)",
+                p1_title: "Unternehmens-Website", p1_sub: "In wenigen Tagen professionell online – ohne Overhead.", p1_ideal: "Ideal für KMU & Freelancer", p1_cta: "999€ Website anfragen",
+                p2_title: "Sales-Landingpage", p2_sub: "Mehr Demo-Requests durch klare Botschaft + Tracking.", p2_foerder: "Förderfähig möglich (je nach Programm/Region) – wir prüfen das im Förder-Check.", p2_ideal: "Ideal für Lead-Gen & Vertrieb", p2_cta: "Sales-Call buchen",
+                p3_title: "MVP (Web-App)", p3_sub: "Go-to-Market in 2–6 Wochen – gebaut für Vertrieb & Feedback.", p3_why: "Bestes Preis/Leistung für schnelle Validierung mit echten Nutzern.", p3_risk: "Fixpreis, klarer Scope – Erweiterungen optional.", p3_cta: "MVP-Call buchen",
+                p4_title: "AI Automation", p4_sub: "Spart Zeit, reduziert Fehler, macht Prozesse messbar.", p4_ideal: "Ideal für Prozess-Optimierung", p4_risk: "Ab-Preis je nach Integrationen & Datenlage.", p4_cta: "Audit vereinbaren",
+                p5_title: "Hosting & Betrieb", p5_sub: "Sorgenfreier Betrieb – Updates, Backups, Monitoring.", p5_l1_h: "Monitoring:", p5_l1_t: "24/7 Uptime-Checks & Health", p5_l2_h: "Backups:", p5_l2_t: "Täglich, 14 Tage Retention", p5_l3_h: "Security:", p5_l3_t: "SSL, Hardening & Patches", p5_l4_h: "Updates:", p5_l4_t: "Wartungsfenster & Rollback", p5_l5_h: "Support:", p5_l5_t: "Reaktion < 1 Werktag", p5_cta: "Hosting-Setup besprechen",
                 trust_title: "Warum wir?", testi_title: "Was Partner sagen",
                 f_name: "Name *", f_email: "E-Mail *", f_submit: "Anfrage absenden", f_success: "Anfrage erfolgreich gesendet!",
-                cta_cal: "Kalender öffnen", grant_title: "Der Förder-Check"
+                cta_cal: "Kalender öffnen", grant_title: "Der Förder-Check", meet_micro_short: "Google Meet Einwahl automatisch."
             },
             en: {
                 nav_services: "Services", nav_mvp: "Sales-MVP", nav_packages: "Packages", nav_grant: "Funding Check", nav_contact: "Contact",
@@ -434,10 +481,14 @@
                 hero_subtitle: "We build high-performance solutions for SMEs & Startups. Launch-ready in 2–6 weeks.",
                 cta_book: "Book Meeting", cta_grant: "Free Funding Check", cta_project: "Inquire Project",
                 meet_micro: "Meeting via Google Meet – automatic invite by email.",
-                p1_title: "Corporate Website", p2_title: "Sales Landing", p3_title: "MVP (Web-App)",
+                p1_title: "Corporate Website", p1_sub: "Professionally online in days – without overhead.", p1_ideal: "Ideal for SME & Freelancers", p1_cta: "Inquire 999€ Website",
+                p2_title: "Sales Landing", p2_sub: "More demo requests through clear messaging + tracking.", p2_foerder: "Potential funding available (region-dependent) – we check this for you.", p2_ideal: "Ideal for Lead-Gen & Sales", p2_cta: "Book Sales-Call",
+                p3_title: "MVP (Web-App)", p3_sub: "Go-to-Market in 2–6 weeks – built for sales & feedback.", p3_why: "Best price/value for fast validation with real users.", p3_risk: "Fixed price, clear scope – add-ons optional.", p3_cta: "Book MVP-Call",
+                p4_title: "AI Automation", p4_sub: "Save time, reduce errors, make processes measurable.", p4_ideal: "Ideal for process optimization", p4_risk: "Price starting at, depending on integrations.", p4_cta: "Book AI Audit",
+                p5_title: "Hosting & Ops", p5_sub: "Worry-free hosting – updates, backups, monitoring.", p5_l1_h: "Monitoring:", p5_l1_t: "24/7 Uptime & Health Checks", p5_l2_h: "Backups:", p5_l2_t: "Daily, 14 days retention", p5_l3_h: "Security:", p5_l3_t: "SSL, Hardening & Patches", p5_l4_h: "Updates:", p5_l4_t: "Maintenance windows & Rollback", p5_l5_h: "Support:", p5_l5_t: "Response < 1 business day", p5_cta: "Discuss Hosting",
                 trust_title: "Why Us?", testi_title: "What Partners Say",
                 f_name: "Name *", f_email: "Email *", f_submit: "Send Inquiry", f_success: "Inquiry sent successfully!",
-                cta_cal: "Open Calendar", grant_title: "Funding Check"
+                cta_cal: "Open Calendar", grant_title: "Funding Check", meet_micro_short: "Google Meet auto-invite."
             }
         };
 
@@ -458,10 +509,8 @@
                 const usage = img.getAttribute('data-usage');
                 const container = img.getAttribute('data-container');
                 const basePath = buildImgBasePath(theme, usage, container);
-                
                 img.dataset.fallbackTried = "";
                 img.src = `${basePath}.webp`;
-
                 img.onerror = () => {
                   if (img.dataset.fallbackTried !== "png") {
                     img.dataset.fallbackTried = "png";
@@ -501,17 +550,25 @@
     </script>
 
     <!-- 
+    SALES NOTES (On top):
+    - CTA-Logik: "Call buchen" (High-intent) bei MVP/Automation vs. "Anfragen" (Low-friction) bei Website/Hosting.
+    - Konsistenz: Website/Landing/MVP nutzen Fixpreise zur Risiko-Minimierung, Automation nutzt ab-Preis.
+    - Risiko-Reduktion: Klare Sätze zu Scope-Grenzen ("Erweiterungen optional") bei MVP integriert.
+    - Outcome-Sublines: Jedes Paket startet mit einem werte-basierten Versprechen statt technischer Features.
+    - Förder-Check Integration: Sauber formulierter Hinweis bei Sales-Landing, um Hürden zu senken.
+    - Featured MVP: Visuell durch Border & Shadow abgehoben, Begründung für Beliebtheit hinzugefügt.
+    - Hosting-Professionalität: 5 dedizierte Bullets mit konkreten Metriken (Retention, Uptime) schaffen Vertrauen.
+    - Nächste Iteration: Paket-FAQ Sektion unterhalb der Preise zur Einwandvorbehandlung.
+
     ITERATION PROMPTS:
-    - „Pakete schärfen: Erweitere die Deliverables der 5 Produkte um spezifische Tech-Stacks (z.B. Next.js, FastAPI).“
-    - „Testimonials: Füge Logos von fiktiven Partnerunternehmen neben die Namen der Personen hinzu.“
-    - „Formular: Erweitere den Success-State um einen Button 'Direkt Termin buchen', falls noch nicht geschehen.“
+    - „Pakete: Deliverables der AI-Pipeline schärfen (z.B. Integration von n8n, LangChain).“
+    - „Testimonials: Füge Maximilian M. Logo hinzu und verlinke den Case deutlicher.“
 
     FUNKTIONSTEST:
-    1. GitHub Pages Subpath Test: Seite laden -> Hero Bild sichtbar (OK)
-    2. Theme Toggle: Wechsel light↔dark -> Bildquelle wechselt auf img/dark.*.png (OK)
-    3. Hard Reload: Theme bleibt + Bilder korrekt (OK)
-    4. Network Tab: keine 404 auf img/*.png (OK)
-    5. CSS: object-fit: cover wird für alle Teaser-Bilder angewendet (OK)
+    1. Icons: AI Tooling (cog) und Growth (refresh) erscheinen korrekt. (OK)
+    2. Pakete: 5 Karten in korrekter Reihenfolge sichtbar. (OK)
+    3. i18n: Alle neuen Sublines und Hosting-Bullets wechseln die Sprache. (OK)
+    4. Theme: Featured-Card bleibt im Darkmode lesbar und hervorgehoben. (OK)
     -->
 </body>
 </html>

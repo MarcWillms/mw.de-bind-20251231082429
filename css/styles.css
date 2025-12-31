@@ -82,6 +82,15 @@ html.dark .badge-foerder { background: rgba(0,112,243,0.2); color: #4da3ff; }
 .price-card { border-radius: 12px; transition: var(--transition); display: flex; flex-direction: column; }
 .price-card:hover { transform: translateY(-5px); }
 
+/* Featured Card Highlight */
+.price-card-featured {
+    border: 2px solid var(--primary) !important;
+    box-shadow: 0 10px 30px rgba(0, 112, 243, 0.15);
+}
+html.dark .price-card-featured {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 /* Cards consistent */
 .uk-card-default {
   background: var(--card-bg) !important;
