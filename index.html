@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Studio | High-End MVPs, AI & Automation in 2-6 Wochen</title>
-    <meta name="description" content="Wir bauen skalierbare MVPs, AI-Pipelines und Automatisierungen für B2B-Startups und KMU. Go-to-Market in 2-6 Wochen. Jetzt Förder-Check buchen.">
+    <title>Software Studio | B2B SaaS MVPs & Automation in 2-6 Wochen</title>
+    <meta name="description" content="Für B2B SaaS (Seed-Series A): In 21 Tagen zu Landingpage + Tracking + Funnel. Fixpreis nach Scope-Freeze. Go-live in 2-6 Wochen.">
     
-    <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
-    
-    <!-- Custom CSS (Relative Path) -->
     <link rel="stylesheet" href="css/styles.css" />
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -22,7 +18,7 @@
     <!-- Navigation -->
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; top: 100">
         <nav class="uk-navbar-container sticky-nav" uk-navbar>
-            <div class=\"uk-navbar-left uk-margin-left\">
+            <div class="uk-navbar-left uk-margin-left">
                 <a class="uk-navbar-item uk-logo uk-text-bold" href="#">
                     <span style="color: var(--primary)">Studio</span>.mw
                 </a>
@@ -31,8 +27,8 @@
             <div class="uk-navbar-right uk-margin-right">
                 <ul class="uk-navbar-nav uk-visible@m">
                     <li><a href="#leistungen" data-t="nav_services">Leistungen</a></li>
-                    <li><a href="#vertrieb" data-t="nav_mvp">Vertriebs-MVP</a></li>
                     <li><a href="#pakete" data-t="nav_packages">Pakete</a></li>
+                    <li><a href="#cases" data-t="nav_cases">Cases</a></li>
                     <li><a href="#foerder" data-t="nav_grant">Förder-Check</a></li>
                     <li><a href="#kontakt" data-t="nav_contact">Kontakt</a></li>
                 </ul>
@@ -40,7 +36,7 @@
                 <div class="uk-navbar-item toggle-container">
                     <div class="lang-toggle" onclick="toggleLang()" id="lang-btn">EN</div>
                     <div class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</div>
-                    <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#offcanvas-nav" uk-toggle></a>
+                    <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#offcanvas-nav" uk-toggle aria-label="Menu"></a>
                 </div>
             </div>
         </nav>
@@ -51,8 +47,8 @@
         <div class="uk-offcanvas-bar">
             <ul class="uk-nav uk-nav-default">
                 <li><a href="#leistungen" data-t="nav_services">Leistungen</a></li>
-                <li><a href="#vertrieb" data-t="nav_mvp">Vertriebs-MVP</a></li>
                 <li><a href="#pakete" data-t="nav_packages">Pakete</a></li>
+                <li><a href="#cases" data-t="nav_cases">Cases</a></li>
                 <li><a href="#foerder" data-t="nav_grant">Förder-Check</a></li>
                 <li><a href="#kontakt" data-t="nav_contact">Kontakt</a></li>
             </ul>
@@ -63,43 +59,33 @@
     <section class="uk-section hero-section uk-flex uk-flex-middle mw-section mw-alt" uk-height-viewport="offset-top: true">
         <div class="uk-container">
             <div class="uk-grid-large uk-child-width-1-1 uk-child-width-1-2@m" uk-grid>
-                <div>
-                    <h1 class="uk-heading-small uk-text-bold" data-t="hero_title">Mehr Traction, weniger Komplexität – Ihr MVP in Rekordzeit.</h1>
-                    <p class="uk-text-lead" data-t="hero_subtitle">Wir entwickeln High-Performance Lösungen für KMU & Startups. Launchbereit in 2–6 Wochen.</p>
-                    <div class="uk-margin-medium-top">
-                        <div class="uk-flex uk-flex-wrap" style="gap: 15px">
-                            <div>
-                                <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-primary uk-button-large">
-                                    <span uk-icon="calendar"></span>
-                                    <span class="uk-margin-small-left" data-t="cta_book">Termin buchen</span>
-                                </a>
-                                <span class="microcopy" data-t="meet_micro">Termin via Google Meet – Einwahldaten kommen automatisch per E-Mail.</span>
-                            </div>
-                            <a href="#foerder" class="uk-button uk-button-default uk-button-large" uk-scroll data-t="cta_grant">Kostenloser Förder-Check</a>
-                        </div>
-                        <div class="uk-margin-top">
-                            <a href="#kontakt" class="uk-button uk-text-bold uk-button-text uk-flex-middle uk-flex" uk-scroll data-t="cta_project">Projekt anfragen <span uk-icon="arrow-right" class="uk-margin-small-left"></span></a>
-                        </div>
+                <div uk-scrollspy="cls: uk-animation-slide-left-small; delay: 100">
+                    <div class="uk-margin-bottom">
+                        <span class="proof-badge"><span uk-icon="clock"></span> <span data-t="badge_time">2–6 Wochen</span></span>
+                        <span class="proof-badge"><span uk-icon="tag"></span> <span data-t="badge_price">Fixpreis</span></span>
+                        <span class="proof-badge"><span uk-icon="check"></span> <span data-t="badge_tracking">Tracking inklusive</span></span>
                     </div>
-                    <p class="uk-text-meta uk-margin-medium-top" data-t="triple_win">Schneller Go-to-Market, weniger Risiko durch mögliche Förderung, und ein MVP, das direkt auf Vertrieb ausgelegt ist.</p>
+                    <h1 class="uk-heading-small uk-text-bold" data-t="hero_title">B2B-SaaS MVPs, die Leads generieren – live in 2–6 Wochen.</h1>
+                    <p class="uk-text-lead" data-t="hero_subtitle">Für B2B SaaS (Seed–Series A) im DACH-Raum: In 21 Tagen zu Landingpage + Tracking + erstem Lead-Funnel. Fixpreis nach Scope-Freeze.</p>
+                    <p class="uk-text-small uk-margin-bottom" data-t="hero_why">Founder-led, Sales-first, keine Agentur-Overheads – schnelle Umsetzung mit klaren Deliverables.</p>
+                    
+                    <div class="uk-margin-medium-top uk-flex uk-flex-wrap" style="gap: 15px">
+                        <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-primary uk-button-large">
+                            <span uk-icon="calendar"></span> <span class="uk-margin-small-left" data-t="cta_book">Termin buchen</span>
+                        </a>
+                        <a href="#kontakt" class="uk-button uk-button-default uk-button-large" uk-scroll data-t="cta_project">Projekt anfragen</a>
+                    </div>
                 </div>
-                <div class="uk-visible@m">
+                <div class="uk-visible@m" uk-scrollspy="cls: uk-animation-fade; delay: 300">
                     <div class="uk-card uk-card-default uk-card-body uk-border-rounded shadow-large" style="background: linear-gradient(135deg, var(--primary) 0%, #0056b3 100%); color: white;">
-                        <h3 class="uk-text-bold" style="color: white !important" data-t="hero_card_title">Founder-led Studio</h3>
-                        <p data-t="hero_card_text">Keine Agentur-Overheads. Direkter Kontakt zu Experten. Wir nutzen ein Netzwerk aus bewährten Partnern für maximale Skalierbarkeit.</p>
-                        <hr>
+                        <h3 class="uk-text-bold" style="color: white !important">SaaS Launch-Ready</h3>
+                        <p>Wir bauen nicht nur Code, sondern eine Lead-Pipeline.</p>
                         <div class="uk-grid-small uk-child-width-1-2" uk-grid>
-                            <div>
-                                <div class="uk-text-h4 uk-text-bold">2-6</div>
-                                <div class="uk-text-small" data-t="stat_launch">Wochen bis Launch</div>
-                            </div>
-                            <div>
-                                <div class="uk-text-h4 uk-text-bold">100%</div>
-                                <div class="uk-text-small" data-t="stat_tech">Moderne Architektur</div>
-                            </div>
+                            <div><div class="uk-text-h4 uk-text-bold">21</div><div class="uk-text-small">Tage bis zum Funnel</div></div>
+                            <div><div class="uk-text-h4 uk-text-bold">100%</div><div class="uk-text-small">Ownership & Code-Qualität</div></div>
                         </div>
                         <div class="uk-margin-top">
-                            <img data-themed-img data-usage="hero" data-container="Home" alt="Hero Theme Asset" style="width: 100%; height: 200px; object-fit: cover; border-radius: 4px;">
+                            <img data-themed-img data-usage="hero" data-container="Home" alt="Hero Asset" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
                         </div>
                     </div>
                 </div>
@@ -107,84 +93,51 @@
         </div>
     </section>
 
-    <!-- Leistungen -->
-    <section id="leistungen" class="uk-section mw-section">
+    <!-- ICP / Für wen -->
+    <section class="uk-section mw-section">
         <div class="uk-container">
-            <div class="uk-text-center uk-margin-large-bottom">
-                <h2 class="uk-text-bold" data-t="services_title">Unsere Expertise</h2>
-                <p class="uk-text-lead" data-t="services_sub">Technologie als Hebel für Ihr Business-Wachstum.</p>
-            </div>
-            <div class="uk-grid-match uk-child-width-1-3@m uk-child-width-1-2@s" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-small; target: .uk-card; delay: 100">
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: code; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold"><span data-t="s1_title">Development Packages</span></h3>
-                        <p data-t="s1_desc">Vordefinierte Bausteine für schnellen Fortschritt ohne Rätselraten.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: paint-bucket; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold"><span data-t="s2_title">High-End Frontend</span></h3>
-                        <p data-t="s2_desc">Schnelle, responsive Interfaces mit modernen Frameworks (Next.js/React).</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: database; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold"><span data-t="s3_title">Scalable Backend</span></h3>
-                        <p data-t="s3_desc">Sichere Server-Logik und API-Architekturen, die mit Ihren Nutzern wachsen.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: cog; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold"><span data-t="s4_title">AI Tooling</span></h3>
-                        <p data-t="s4_desc">Eigene KI-Interfaces für spezifische Anwendungsfälle in Ihrem Unternehmen.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: settings; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold"><span data-t="s5_title">Automation Pipelines</span></h3>
-                        <p data-t="s5_desc">Lead-Qualifizierung, CRM-Workflows und Prozess-Automatisierung mit KI.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <span uk-icon="icon: refresh; ratio: 2" class="uk-margin-bottom trust-icon"></span>
-                        <h3 class="uk-card-title uk-text-bold"><span data-t="s6_title">Growth & Iteration</span></h3>
-                        <p data-t="s6_desc">Kontinuierliche Verbesserung Ihres Produkts basierend auf echtem Nutzerfeedback.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vertriebs-MVP -->
-    <section id="vertrieb" class="uk-section mw-section mw-alt">
-        <div class="uk-container">
-            <div class="uk-grid-large uk-flex-middle" uk-grid>
-                <div class="uk-width-1-2@m">
-                    <h2 class="uk-text-bold" data-t="mvp_title">Das Vertriebs-MVP</h2>
-                    <p class="uk-text-lead" data-t="mvp_lead">Ein Produkt ist wertlos, wenn es niemand kauft. Wir bauen MVPs, die Leads generieren.</p>
+            <div class="uk-grid-large uk-child-width-1-2@m" uk-grid>
+                <div uk-scrollspy="cls: uk-animation-slide-left-small">
+                    <h2 class="uk-text-bold" data-t="icp_yes_title">Für wen das passt</h2>
                     <ul class="uk-list uk-list-bullet">
-                        <li data-t="mvp_l1"><strong>Strategisches Messaging:</strong> Wir formulieren, was Ihre Kunden hören müssen.</li>
-                        <li data-t="mvp_l2"><strong>High-Conversion Landingpage:</strong> Optimiert für Demo-Requests und Sales.</li>
-                        <li data-t="mvp_l3"><strong>End-to-End Tracking:</strong> Wissen, woher die Leads kommen.</li>
-                        <li data-t="mvp_l4"><strong>CRM-Automation:</strong> Direkte Übergabe der Leads an Ihren Vertriebsprozess.</li>
+                        <li data-t="icp_yes_1">B2B SaaS Seed–Series A, die in <60 Tagen Pipeline aufbauen müssen</li>
+                        <li data-t="icp_yes_2">Teams mit klarer Hypothese, aber ohne Engineering-Bandbreite</li>
+                        <li data-t="icp_yes_3">KMU mit messbarem Lead-Gen Bedarf (z.B. Beratung, B2B Services)</li>
                     </ul>
-                    <a href="#kontakt" class="uk-button uk-button-primary uk-margin-top">
-                        <span uk-icon="bolt"></span>
-                        <span class="uk-margin-small-left" data-t="cta_mvp_plan">MVP in 2–6 Wochen planen</span>
-                    </a>
                 </div>
-                <div class="uk-width-1-2@m">
-                    <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded shadow-large">
-                        <h4 class="uk-text-bold">Conversion Focus</h4>
-                        <div class="img-container-aspect uk-margin-bottom">
-                            <img data-themed-img data-usage="section" data-container="Vertrieb" alt="Sales MVP Preview">
-                        </div>
+                <div uk-scrollspy="cls: uk-animation-slide-right-small">
+                    <h2 class="uk-text-bold" data-t="icp_no_title">Für wen es nicht passt</h2>
+                    <ul class="uk-list uk-list-divider">
+                        <li data-t="icp_no_1">B2C Apps ohne klaren Vertriebskanal</li>
+                        <li data-t="icp_no_2">Projekte ohne Entscheider-Zugang oder Budgetrahmen</li>
+                        <li data-t="icp_no_3">Reine „Nice-to-have“ Features ohne KPI-Fokus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risiko Rausnehmen -->
+    <section class="uk-section mw-section mw-alt">
+        <div class="uk-container">
+            <h2 class="uk-text-center uk-text-bold uk-margin-large-bottom" data-t="risk_title">Risiko rausnehmen</h2>
+            <div class="uk-grid-medium uk-child-width-1-3@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default feature-card">
+                        <h4 class="uk-text-bold" data-t="risk_1_h">Scope in 48h</h4>
+                        <p class="uk-text-small" data-t="risk_1_t">Wir definieren Deliverables, Timeline und Abnahmekriterien präzise vorab.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default feature-card">
+                        <h4 class="uk-text-bold" data-t="risk_2_h">Fixpreis nach Scope-Freeze</h4>
+                        <p class="uk-text-small" data-t="risk_2_t">Keine Überraschungen. Änderungen werden als Add-on fair kalkuliert.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default feature-card">
+                        <h4 class="uk-text-bold" data-t="risk_3_h">Go/No-Go Woche 1</h4>
+                        <p class="uk-text-small" data-t="risk_3_t">Nach der ersten Woche entscheiden wir gemeinsam: Passt die Chemie & der Kurs? Wenn nicht, stoppen wir sauber.</p>
                     </div>
                 </div>
             </div>
@@ -194,179 +147,82 @@
     <!-- Pakete & Preise -->
     <section id="pakete" class="uk-section mw-section">
         <div class="uk-container">
-            <div class=\"uk-text-center uk-margin-large-bottom\">
-                <h2 class="uk-text-bold" data-t="pricing_title">Klare Pakete, volle Transparenz</h2>
+            <div class="uk-text-center uk-margin-large-bottom">
+                <h2 class="uk-text-bold" data-t="pricing_title">Klare Pakete, volle Vergleichbarkeit</h2>
                 <p data-t="pricing_sub">Wählen Sie das Fundament für Ihre nächste Ausbaustufe.</p>
             </div>
             
             <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" uk-grid>
                 <!-- Paket 1: Website -->
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body price-card">
+                    <div class="uk-card uk-card-default price-card">
                         <h3 class="uk-text-bold" data-t="p1_title">Unternehmens-Website</h3>
-                        <div class="uk-text-h4 uk-text-bold">999 €</div>
-                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p1_sub">In wenigen Tagen professionell online – ohne Overhead.</p>
-                        <p class="uk-text-small" data-t="p1_ideal">Ideal für KMU & Freelancer</p>
+                        <div class="uk-text-h3 uk-text-bold">999 €</div>
+                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p1_sub">Professionell online – ohne Overhead.</p>
+                        <p class="uk-text-meta" data-t="p1_ideal">Ideal für KMU & Freelancer</p>
                         <hr>
                         <ul class="uk-list uk-list-divider uk-text-small" data-t="p1_list">
-                            <li>Modernes Responsive Design</li>
-                            <li>CMS Anbindung (optional)</li>
-                            <li>SEO Basis-Optimierung</li>
-                            <li>Impressum & DSGVO-Ready</li>
-                            <li>Launch in 1-2 Wochen</li>
+                            <li>1–5 Inhaltsseiten</li>
+                            <li>Kontaktformular (Lead-Capture)</li>
+                            <li>Basic SEO (Titles/Meta)</li>
+                            <li>Performance & Speed Optimiert</li>
+                            <li>Timeline: 3–7 Tage</li>
+                        </ul>
+                        <ul class="not-included uk-text-meta">
+                            <li data-t="p1_not_1">Copywriting</li>
+                            <li data-t="p1_not_2">CRM-Integration</li>
                         </ul>
                         <div class="uk-margin-auto-top">
                             <a href="#kontakt" class="uk-button uk-button-default uk-width-1-1" data-t="p1_cta">999€ Website anfragen</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Paket 2: Sales Landing -->
                 <div>
-                    <div class="uk-card uk-card-default uk-card-body price-card">
-                        <div class="badge-foerder" data-t="p2_foerder">Förderfähig möglich*</div>
+                    <div class="uk-card uk-card-default price-card">
+                        <div class="badge-foerder" data-t="p2_foerder">Check: Förderfähig möglich*</div>
                         <h3 class="uk-text-bold" data-t="p2_title">Sales-Landingpage</h3>
-                        <div class="uk-text-h4 uk-text-bold">2.499 €</div>
-                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p2_sub">Mehr Demo-Requests durch klare Botschaft + Tracking.</p>
-                        <p class="uk-text-small" data-t="p2_ideal">Ideal für Lead-Gen & Vertrieb</p>
+                        <div class="uk-text-h3 uk-text-bold">1.499 – 2.499 €</div>
+                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p2_sub">Mehr Demo-Requests durch Tracking.</p>
+                        <p class="uk-text-meta" data-t="p2_ideal">Ideal für B2B Lead-Gen</p>
                         <hr>
                         <ul class="uk-list uk-list-divider uk-text-small" data-t="p2_list">
+                            <li>High-Conversion Copy Framework</li>
+                            <li>GA4 / Matomo + Event-Tracking</li>
+                            <li>Kalender-Integration (TidyCal/Calendly)</li>
                             <li>A/B Testing fähiges Layout</li>
-                            <li>Premium Copywriting (DE/EN)</li>
-                            <li>CRM & Lead-Automation</li>
-                            <li>Advanced Tracking (GA4/Meta)</li>
-                            <li>Timeline: 2-3 Wochen</li>
+                            <li>Timeline: 2 Wochen</li>
+                        </ul>
+                        <ul class="not-included uk-text-meta">
+                            <li data-t="p2_not_1">Ad-Management</li>
                         </ul>
                         <div class="uk-margin-auto-top">
-                            <a href="#kontakt" class="uk-button uk-button-default uk-width-1-1" data-t="p2_cta">Sales-Call buchen</a>
+                            <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-primary uk-width-1-1" data-t="cta_book_short">Termin buchen</a>
                         </div>
                     </div>
                 </div>
-                <!-- Paket 3: MVP (Featured) -->
+
+                <!-- Paket 3: MVP -->
                 <div>
-                    <div class="uk-card uk-card-primary uk-card-body price-card price-card-featured" style="background: var(--primary); color: white;">
+                    <div class="uk-card uk-card-primary price-card price-card-featured" style="background: var(--primary); color: white;">
                         <div class="badge-foerder" style="background: white; color: var(--primary);" data-t="featured_badge">Most Popular</div>
                         <h3 class="uk-text-bold" style="color: white !important" data-t="p3_title">MVP (Web-App)</h3>
-                        <div class="uk-text-h4 uk-text-bold">9.999 €</div>
-                        <p class="uk-text-small uk-text-bold" data-t="p3_sub">Go-to-Market in 2–6 Wochen – gebaut für Vertrieb & Feedback.</p>
-                        <p class="uk-text-small" data-t="p3_why">Bestes Preis/Leistung für schnelle Validierung.</p>
+                        <div class="uk-text-h3 uk-text-bold">ab 7.999 €</div>
+                        <p class="uk-text-small uk-text-bold" data-t="p3_sub">Go-to-Market in 2–6 Wochen.</p>
+                        <p class="uk-text-meta" style="color: rgba(255,255,255,0.7)" data-t="p3_why">Bestes Preis/Leistung für SaaS-Validierung.</p>
                         <hr>
                         <ul class="uk-list uk-list-divider uk-text-small" data-t="p3_list">
-                            <li>Fullstack-Architektur & Auth</li>
-                            <li>Skalierbare Datenbank</li>
-                            <li>Core Product Features</li>
-                            <li>Admin/Backoffice light</li>
-                            <li>Inkl. Analytics & Events</li>
+                            <li>1 Kern-Use-Case (Fullstack)</li>
+                            <li>Auth, Database & Admin light</li>
+                            <li>1–2 Drittanbieter-Integrationen</li>
+                            <li>Analytics & Event Tracking</li>
+                            <li>Timeline: 4–6 Wochen</li>
                         </ul>
-                        <p class="uk-text-meta uk-margin-small-top" style="color: rgba(255,255,255,0.8)" data-t="p3_risk">Fixpreis, klarer Scope – Erweiterungen optional.</p>
+                        <p class="uk-text-meta" style="color: rgba(255,255,255,0.8)" data-t="p3_risk">Fixpreis nach Scope-Freeze.</p>
                         <div class="uk-margin-auto-top">
                             <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-default uk-width-1-1" style="background: white; color: var(--primary); border: none;">
-                                <span uk-icon="calendar"></span>
-                                <span class="uk-margin-small-left" data-t="p3_cta">MVP-Call buchen</span>
-                            </a>
-                            <span class="microcopy uk-text-center" style="color: white" data-t="meet_micro_short">Google Meet Einwahl automatisch.</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Paket 4: AI Automation -->
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body price-card">
-                        <h3 class="uk-text-bold" data-t="p4_title">AI Automation</h3>
-                        <div class="uk-text-h4 uk-text-bold">ab 9.999 €</div>
-                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p4_sub">Spart Zeit, reduziert Fehler, macht Prozesse messbar.</p>
-                        <p class="uk-text-small" data-t="p4_ideal">Ideal für Prozess-Optimierung</p>
-                        <hr>
-                        <ul class="uk-list uk-list-divider uk-text-small" data-t="p4_list">
-                            <li>Custom AI Agents / Workflows</li>
-                            <li>API-Integrationen (Zapier/n8n)</li>
-                            <li>Fehler-Logging & Monitoring</li>
-                            <li>Handover & Team Training</li>
-                            <li>Timeline: 3-5 Wochen</li>
-                        </ul>
-                        <p class="uk-text-meta uk-margin-small-top" data-t="p4_risk">Ab-Preis je nach Integrationen & Datenlage.</p>
-                        <div class="uk-margin-auto-top">
-                            <a href="#kontakt" class="uk-button uk-button-default uk-width-1-1" data-t="p4_cta">Audit vereinbaren</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Paket 5: Hosting -->
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body price-card">
-                        <h3 class="uk-text-bold" data-t="p5_title">Hosting & Betrieb</h3>
-                        <div class="uk-text-h4 uk-text-bold">ab 99 €/Monat</div>
-                        <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p5_sub">Sorgenfreier Betrieb – Updates, Backups, Monitoring.</p>
-                        <hr>
-                        <ul class="uk-list uk-list-divider uk-text-small">
-                            <li><strong data-t="p5_l1_h">Monitoring:</strong> <span data-t="p5_l1_t">24/7 Uptime-Checks & Health</span></li>
-                            <li><strong data-t="p5_l2_h">Backups:</strong> <span data-t="p5_l2_t">Täglich, 14 Tage Retention</span></li>
-                            <li><strong data-t="p5_l3_h">Security:</strong> <span data-t="p5_l3_t">SSL, Hardening & Patches</span></li>
-                            <li><strong data-t="p5_l4_h">Updates:</strong> <span data-t="p5_l4_t">Wartungsfenster & Rollback</span></li>
-                            <li><strong data-t="p5_l5_h">Support:</strong> <span data-t="p5_l5_t">Reaktion < 1 Werktag</span></li>
-                        </ul>
-                        <div class="uk-margin-auto-top">
-                            <a href="#kontakt" class="uk-button uk-button-default uk-width-1-1" data-t="p5_cta">Hosting-Setup besprechen</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="uk-text-center uk-margin-large-top">
-                <p class="uk-text-meta" data-t="retainer_info">Optional Retainer: „Growth & Iteration“ ab 1.200 €/Monat für kontinuierliche Entwicklung.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us Section (Trust) -->
-    <section class="uk-section mw-section mw-alt">
-        <div class="uk-container">
-            <h2 class="uk-text-center uk-text-bold uk-margin-large-bottom" data-t="trust_title">Warum wir?</h2>
-            <div class="uk-grid-medium uk-child-width-1-4@m uk-child-width-1-2@s" uk-grid>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                        <span uk-icon="icon: bolt; ratio: 2" class="trust-icon"></span>
-                        <h4 class="uk-text-bold" data-t="t1_title">Performance</h4>
-                        <p class="uk-text-small" data-t="t1_desc">Optimiert auf Speed und maximale Conversion-Rates.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                        <span uk-icon="icon: lock; ratio: 2" class="trust-icon"></span>
-                        <h4 class="uk-text-bold" data-t="t2_title">Wartbarkeit</h4>
-                        <p class="uk-text-small" data-t="t2_desc">Sauberer Code, der auch in 3 Jahren noch skaliert.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                        <span uk-icon="icon: clock; ratio: 2" class="trust-icon"></span>
-                        <h4 class="uk-text-bold" data-t="t3_title">Time-to-Launch</h4>
-                        <p class="uk-text-small" data-t="t3_desc">Ihr Produkt am Markt in Rekordzeit, ohne Umwege.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body uk-text-center">
-                        <span uk-icon="icon: search; ratio: 2" class="trust-icon"></span>
-                        <h4 class="uk-text-bold" data-t="t4_title">Transparenz</h4>
-                        <p class="uk-text-small" data-t="t4_desc">Ehrliche Kommunikation und klare Fixpreise.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Förder-Check -->
-    <section id="foerder" class="uk-section mw-section">
-        <div class="uk-container">
-            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-border-rounded uk-overflow-hidden shadow-large" uk-grid>
-                <div class="uk-card-media-left">
-                    <img data-themed-img data-usage="section" data-container="Foerder" alt="Funding Opportunity" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div>
-                    <div class="uk-card-body">
-                        <h2 class="uk-text-bold" data-t="grant_title">Der Förder-Check</h2>
-                        <p class="uk-text-lead" data-t="grant_lead">Investieren Sie weniger Eigenmittel durch staatliche Zuschüsse.</p>
-                        <p data-t="grant_text">Wir prüfen für Sie passende Förderprogramme und unterstützen Sie beim Projektzuschnitt.</p>
-                        <div class="uk-margin-top">
-                            <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-primary uk-button-large">
-                                <span uk-icon="calendar"></span>
-                                <span class="uk-margin-small-left" data-t="cta_grant_book">Kostenlosen Förder-Check buchen</span>
+                                <span uk-icon="calendar"></span> <span class="uk-margin-small-left" data-t="p3_cta">MVP-Call buchen</span>
                             </a>
                         </div>
                     </div>
@@ -375,64 +231,128 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="uk-section mw-section mw-alt">
+    <!-- Mini-Cases -->
+    <section id="cases" class="uk-section mw-section mw-alt">
         <div class="uk-container">
-            <h2 class="uk-text-center uk-text-bold uk-margin-large-bottom" data-t="testi_title">Was Partner sagen</h2>
-            <div uk-slider="center: true; autoplay: true">
-                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-                    <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m uk-grid">
-                        <li>
-                            <div class=\"uk-card uk-card-default uk-card-body uk-border-rounded\">
-                                <div class="star-rating">★★★★★ 5.0</div>
-                                <p>"In nur 3 Wochen hatten wir ein funktionierendes Sales-Dashboard. Die Geschwindigkeit ist beeindruckend."</p>
-                                <hr>
-                                <h5 class="uk-margin-remove-bottom uk-text-bold">Maximilian M.</h5>
-                                <p class="uk-text-meta uk-margin-remove-top">Co-Founder, B2B SaaS</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-                                <div class="star-rating">★★★★★ 4.9</div>
-                                <p>"Die AI-Automatisierung spart uns wöchentlich 15 Stunden manuelle Arbeit."</p>
-                                <hr>
-                                <h5 class="uk-margin-remove-bottom uk-text-bold">Christian S.</h5>
-                                <p class="uk-text-meta uk-margin-remove-top">CEO, Fintech Startup</p>
-                            </div>
-                        </li>
-                    </ul>
+            <h2 class="uk-text-center uk-text-bold uk-margin-large-bottom" data-t="cases_title">Ergebnisse & Proof</h2>
+            <div class="uk-grid-medium uk-child-width-1-3@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default feature-card">
+                        <div class="star-rating">★★★★★</div>
+                        <p class="uk-text-bold">Sales-Reporting Dashboard</p>
+                        <p class="uk-text-small" data-t="case_1_text">Ausgangslage: Manuelle Auswertung in Excel. Lösung: Datenpipeline + Dashboard. Ergebnis: Echtzeit-KPIs.</p>
+                        <hr>
+                        <div class="uk-text-meta">Maximilian M. · B2B SaaS · 3 Wochen</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default feature-card">
+                        <div class="star-rating">★★★★★</div>
+                        <p class="uk-text-bold">AI Lead-Qualifizierung</p>
+                        <p class="uk-text-small" data-t="case_2_text">Automatisierter Workflow für Inbound-Leads spart wöchentlich 15h Arbeit im Vertrieb.</p>
+                        <hr>
+                        <div class="uk-text-meta">Christian S. · Fintech · 4 Wochen</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default feature-card">
+                        <div class="star-rating">★★★★★</div>
+                        <p class="uk-text-bold">SaaS MVP Launch</p>
+                        <p class="uk-text-small" data-t="case_3_text">Von der Idee zum marktfähigen MVP inkl. Stripe-Anbindung in Rekordzeit.</p>
+                        <hr>
+                        <div class="uk-text-meta">Sarah L. · Health · 5 Wochen</div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="uk-section mw-section">
+        <div class="uk-container uk-container-small">
+            <h2 class="uk-text-center uk-text-bold uk-margin-large-bottom">FAQ</h2>
+            <ul uk-accordion>
+                <li class="uk-open">
+                    <a class="uk-accordion-title uk-text-bold" href="#" data-t="faq_1_q">Warum 2–6 Wochen?</a>
+                    <div class="uk-accordion-content" data-t="faq_1_a">
+                        Wir nutzen KI-gestützte Entwicklung und erprobte Softwaremodule. Statt das Rad neu zu erfinden, fokussieren wir uns auf Ihre Unique Value Proposition.
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-bold" href="#" data-t="faq_2_q">Was passiert, wenn der Scope wächst?</a>
+                    <div class="uk-accordion-content" data-t="faq_2_a">
+                        Nach dem Scope-Freeze arbeiten wir zum Fixpreis. Neue Ideen werden als Add-on oder im Rahmen eines Retainers transparent kalkuliert.
+                    </div>
+                </li>
+                <li>
+                    <a class="uk-accordion-title uk-text-bold" href="#" data-t="faq_3_q">Wer liefert die Texte & Assets?</a>
+                    <div class="uk-accordion-content" data-t="faq_3_a">
+                        Wir nutzen KI, um Texte und erste Designs schnell zu generieren. Für Premium-Copywriting oder Branding arbeiten wir mit Partnern zusammen oder integrieren Ihre Assets.
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- Kontakt -->
-    <section id="kontakt" class="uk-section mw-section">
+    <section id="kontakt" class="uk-section mw-section mw-alt">
         <div class="uk-container">
             <div class="uk-grid-large" uk-grid>
-                <div class="uk-width-1-2@m">
+                <div class="uk-width-2-3@m">
                     <h2 class="uk-text-bold" data-t="contact_title">Projekt anfragen</h2>
                     <form id="contact-form" class="uk-form-stacked">
                         <div class="uk-grid-small uk-child-width-1-2@s" uk-grid>
                             <div><label class="uk-form-label" data-t="f_name">Name *</label><input class="uk-input" type="text" id="name" required></div>
                             <div><label class="uk-form-label" data-t="f_email">E-Mail *</label><input class="uk-input" type="email" id="email" required></div>
                         </div>
+                        <div class="uk-grid-small uk-child-width-1-2@s uk-margin" uk-grid>
+                            <div><label class="uk-form-label" data-t="f_company">Firma / Website</label><input class="uk-input" type="text" id="company"></div>
+                            <div>
+                                <label class="uk-form-label" data-t="f_goal">Ziel des Projekts</label>
+                                <select class="uk-select" id="goal">
+                                    <option value="leads" data-t="opt_leads">Mehr Demo-Requests</option>
+                                    <option value="mvp" data-t="opt_mvp">MVP bauen</option>
+                                    <option value="automation" data-t="opt_auto">Automation</option>
+                                    <option value="other" data-t="opt_other">Sonstiges</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="uk-grid-small uk-child-width-1-2@s uk-margin" uk-grid>
+                            <div>
+                                <label class="uk-form-label" data-t="f_budget">Budgetrahmen</label>
+                                <select class="uk-select" id="budget">
+                                    <option value="<1k">< 1.000 €</option>
+                                    <option value="1-5k">1.000 – 5.000 €</option>
+                                    <option value="5-15k">5.000 – 15.000 €</option>
+                                    <option value="15k+">15.000 € +</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="uk-form-label" data-t="f_deadline">Deadline</label>
+                                <select class="uk-select" id="deadline">
+                                    <option value="asap">ASAP</option>
+                                    <option value="2-4w">2–4 Wochen</option>
+                                    <option value="1-2m">1–2 Monate</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="uk-margin">
-                            <label class="uk-form-label" data-t="f_msg">Nachricht *</label>
+                            <label class="uk-form-label" data-t="f_msg">Kurzbeschreibung *</label>
                             <textarea class="uk-textarea" rows="4" id="message" required></textarea>
                         </div>
                         <button type="submit" class="uk-button uk-button-primary uk-button-large uk-width-1-1" data-t="f_submit">Anfrage absenden</button>
                     </form>
                     <div id="contact-success" class="uk-alert-success uk-margin-top" uk-alert>
-                        <p class="uk-text-bold" data-t="f_success">Anfrage erfolgreich gesendet!</p>
+                        <p class="uk-text-bold" data-t="f_success">Anfrage erfolgreich gesendet! Wir melden uns in < 24h.</p>
+                        <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-default uk-margin-small-top" data-t="cta_book">Direkt Termin buchen</a>
                     </div>
                 </div>
-                <div class="uk-width-1-2@m">
+                <div class="uk-width-1-3@m">
                     <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-                        <h3 class="uk-text-bold" data-t="cal_title">Direkt Termin buchen</h3>
-                        <a href="https://tidycal.com/mpploym/30-minute-meeting" target="_blank" class="uk-button uk-button-primary uk-button-large">
-                            <span uk-icon="calendar"></span>
-                            <span class="uk-margin-small-left" data-t="cta_cal">Kalender öffnen</span>
+                        <h3 class="uk-text-bold" data-t="cal_title">Direkt-Call</h3>
+                        <p class="uk-text-small" data-t="cal_desc">Keine Lust auf Formulare? Buchen Sie direkt 30 Min. für ein Strategiegespräch.</p>
+                        <a href="https://tidycal.com/mpploym/30-minute-meeting" target="_blank" class="uk-button uk-button-primary uk-button-large uk-width-1-1">
+                            <span uk-icon="calendar"></span> <span class="uk-margin-small-left" data-t="cta_cal">Kalender öffnen</span>
                         </a>
                     </div>
                 </div>
@@ -440,55 +360,84 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="uk-section uk-section-secondary uk-padding-remove-bottom">
         <div class="uk-container">
             <div class="uk-text-center uk-padding uk-text-meta">
-                &copy; 2024 Software Studio. mw.de
+                &copy; 2024 Software Studio. mw.de · <a href="#" data-t="imprint">Impressum</a> · <a href="#" data-t="privacy">Datenschutz</a>
             </div>
         </div>
     </footer>
 
-    <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
 
     <script>
-        // --- Helpers ---
-        function getBaseUrl() { return new URL('.', window.location.href).toString(); }
-        function buildImgBasePath(theme, usage, container) { return `${getBaseUrl()}img/${theme}.${usage}${container}`; }
-
-        // --- i18n Logic ---
         const translations = {
             de: {
-                nav_services: "Leistungen", nav_mvp: "Vertriebs-MVP", nav_packages: "Pakete", nav_grant: "Förder-Check", nav_contact: "Kontakt",
-                hero_title: "Mehr Traction, weniger Komplexität – Ihr MVP in Rekordzeit.",
-                hero_subtitle: "Wir entwickeln High-Performance Lösungen für KMU & Startups. Launchbereit in 2–6 Wochen.",
-                cta_book: "Termin buchen", cta_grant: "Kostenloser Förder-Check", cta_project: "Projekt anfragen",
-                meet_micro: "Termin via Google Meet – Einwahldaten kommen automatisch per E-Mail.",
-                p1_title: "Unternehmens-Website", p1_sub: "In wenigen Tagen professionell online – ohne Overhead.", p1_ideal: "Ideal für KMU & Freelancer", p1_cta: "999€ Website anfragen",
-                p2_title: "Sales-Landingpage", p2_sub: "Mehr Demo-Requests durch klare Botschaft + Tracking.", p2_foerder: "Förderfähig möglich (je nach Programm/Region) – wir prüfen das im Förder-Check.", p2_ideal: "Ideal für Lead-Gen & Vertrieb", p2_cta: "Sales-Call buchen",
-                p3_title: "MVP (Web-App)", p3_sub: "Go-to-Market in 2–6 Wochen – gebaut für Vertrieb & Feedback.", p3_why: "Bestes Preis/Leistung für schnelle Validierung mit echten Nutzern.", p3_risk: "Fixpreis, klarer Scope – Erweiterungen optional.", p3_cta: "MVP-Call buchen",
-                p4_title: "AI Automation", p4_sub: "Spart Zeit, reduziert Fehler, macht Prozesse messbar.", p4_ideal: "Ideal für Prozess-Optimierung", p4_risk: "Ab-Preis je nach Integrationen & Datenlage.", p4_cta: "Audit vereinbaren",
-                p5_title: "Hosting & Betrieb", p5_sub: "Sorgenfreier Betrieb – Updates, Backups, Monitoring.", p5_l1_h: "Monitoring:", p5_l1_t: "24/7 Uptime-Checks & Health", p5_l2_h: "Backups:", p5_l2_t: "Täglich, 14 Tage Retention", p5_l3_h: "Security:", p5_l3_t: "SSL, Hardening & Patches", p5_l4_h: "Updates:", p5_l4_t: "Wartungsfenster & Rollback", p5_l5_h: "Support:", p5_l5_t: "Reaktion < 1 Werktag", p5_cta: "Hosting-Setup besprechen",
-                trust_title: "Warum wir?", testi_title: "Was Partner sagen",
-                f_name: "Name *", f_email: "E-Mail *", f_submit: "Anfrage absenden", f_success: "Anfrage erfolgreich gesendet!",
-                cta_cal: "Kalender öffnen", grant_title: "Der Förder-Check", meet_micro_short: "Google Meet Einwahl automatisch."
+                nav_services: "Leistungen", nav_packages: "Pakete", nav_cases: "Cases", nav_grant: "Förder-Check", nav_contact: "Kontakt",
+                badge_time: "2–6 Wochen", badge_price: "Fixpreis", badge_tracking: "Tracking inklusive",
+                hero_title: "B2B-SaaS MVPs, die Leads generieren – live in 2–6 Wochen.",
+                hero_subtitle: "Für B2B SaaS (Seed–Series A) im DACH-Raum: In 21 Tagen zu Landingpage + Tracking + Funnel. Fixpreis nach Scope-Freeze.",
+                hero_why: "Founder-led, Sales-first, keine Agentur-Overheads – schnelle Umsetzung mit klaren Deliverables.",
+                cta_book: "Termin buchen", cta_project: "Projekt anfragen", cta_book_short: "Termin buchen",
+                icp_yes_title: "Für wen das passt", icp_no_title: "Für wen es nicht passt",
+                icp_yes_1: "B2B SaaS Seed–Series A, die in <60 Tagen Pipeline aufbauen müssen",
+                icp_yes_2: "Teams mit klarer Hypothese, aber ohne Engineering-Bandbreite",
+                icp_yes_3: "KMU mit messbarem Lead-Gen Bedarf (z.B. Beratung, B2B Services)",
+                icp_no_1: "B2C Apps ohne klaren Vertriebskanal",
+                icp_no_2: "Projekte ohne Entscheider-Zugang oder Budgetrahmen",
+                icp_no_3: "Reine „Nice-to-have“ Features ohne KPI-Fokus",
+                risk_title: "Risiko rausnehmen", risk_1_h: "Scope in 48h", risk_1_t: "Wir definieren Deliverables, Timeline und Abnahmekriterien präzise vorab.",
+                risk_2_h: "Fixpreis nach Scope-Freeze", risk_2_t: "Keine Überraschungen. Änderungen werden als Add-on fair kalkuliert.",
+                risk_3_h: "Go/No-Go Woche 1", risk_3_t: "Nach der ersten Woche entscheiden wir gemeinsam: Passt die Chemie & der Kurs?",
+                pricing_title: "Klare Pakete, volle Vergleichbarkeit", pricing_sub: "Wählen Sie das Fundament für Ihre nächste Ausbaustufe.",
+                p1_title: "Unternehmens-Website", p1_sub: "Professionell online – ohne Overhead.", p1_ideal: "Ideal für KMU & Freelancer", p1_cta: "999€ Website anfragen",
+                p1_not_1: "Copywriting", p1_not_2: "CRM-Integration",
+                p2_title: "Sales-Landingpage", p2_sub: "Mehr Demo-Requests durch Tracking.", p2_foerder: "Check: Förderfähig möglich*", p2_ideal: "Ideal für B2B Lead-Gen",
+                p2_not_1: "Ad-Management",
+                p3_title: "MVP (Web-App)", p3_sub: "Go-to-Market in 2–6 Wochen.", p3_why: "Bestes Preis/Leistung für SaaS-Validierung.", p3_risk: "Fixpreis nach Scope-Freeze.", p3_cta: "MVP-Call buchen",
+                cases_title: "Ergebnisse & Proof", case_1_text: "Ausgangslage: Manuelle Auswertung. Lösung: Dashboard. Ergebnis: Echtzeit-KPIs.",
+                faq_1_q: "Warum 2–6 Wochen?", faq_1_a: "Wir nutzen KI-gestützte Entwicklung und erprobte Module.",
+                faq_2_q: "Scope-Wachstum?", faq_2_a: "Nach Scope-Freeze Fixpreis. Neue Ideen als Add-on.",
+                contact_title: "Projekt anfragen", f_name: "Name *", f_email: "E-Mail *", f_company: "Firma / Website", f_goal: "Ziel des Projekts",
+                opt_leads: "Mehr Demo-Requests", opt_mvp: "MVP bauen", opt_auto: "Automation", opt_other: "Sonstiges",
+                f_budget: "Budgetrahmen", f_deadline: "Deadline", f_msg: "Kurzbeschreibung *", f_submit: "Anfrage absenden",
+                f_success: "Anfrage erfolgreich gesendet! Wir melden uns in < 24h.",
+                cal_title: "Direkt-Call", cal_desc: "Buchen Sie direkt 30 Min. Strategiegespräch.", cta_cal: "Kalender öffnen",
+                imprint: "Impressum", privacy: "Datenschutz"
             },
             en: {
-                nav_services: "Services", nav_mvp: "Sales-MVP", nav_packages: "Packages", nav_grant: "Funding Check", nav_contact: "Contact",
-                hero_title: "More Traction, Less Complexity – Your MVP in Record Time.",
-                hero_subtitle: "We build high-performance solutions for SMEs & Startups. Launch-ready in 2–6 weeks.",
-                cta_book: "Book Meeting", cta_grant: "Free Funding Check", cta_project: "Inquire Project",
-                meet_micro: "Meeting via Google Meet – automatic invite by email.",
-                p1_title: "Corporate Website", p1_sub: "Professionally online in days – without overhead.", p1_ideal: "Ideal for SME & Freelancers", p1_cta: "Inquire 999€ Website",
-                p2_title: "Sales Landing", p2_sub: "More demo requests through clear messaging + tracking.", p2_foerder: "Potential funding available (region-dependent) – we check this for you.", p2_ideal: "Ideal for Lead-Gen & Sales", p2_cta: "Book Sales-Call",
-                p3_title: "MVP (Web-App)", p3_sub: "Go-to-Market in 2–6 weeks – built for sales & feedback.", p3_why: "Best price/value for fast validation with real users.", p3_risk: "Fixed price, clear scope – add-ons optional.", p3_cta: "Book MVP-Call",
-                p4_title: "AI Automation", p4_sub: "Save time, reduce errors, make processes measurable.", p4_ideal: "Ideal for process optimization", p4_risk: "Price starting at, depending on integrations.", p4_cta: "Book AI Audit",
-                p5_title: "Hosting & Ops", p5_sub: "Worry-free hosting – updates, backups, monitoring.", p5_l1_h: "Monitoring:", p5_l1_t: "24/7 Uptime & Health Checks", p5_l2_h: "Backups:", p5_l2_t: "Daily, 14 days retention", p5_l3_h: "Security:", p5_l3_t: "SSL, Hardening & Patches", p5_l4_h: "Updates:", p5_l4_t: "Maintenance windows & Rollback", p5_l5_h: "Support:", p5_l5_t: "Response < 1 business day", p5_cta: "Discuss Hosting",
-                trust_title: "Why Us?", testi_title: "What Partners Say",
-                f_name: "Name *", f_email: "Email *", f_submit: "Send Inquiry", f_success: "Inquiry sent successfully!",
-                cta_cal: "Open Calendar", grant_title: "Funding Check", meet_micro_short: "Google Meet auto-invite."
+                nav_services: "Services", nav_packages: "Packages", nav_cases: "Cases", nav_grant: "Grants", nav_contact: "Contact",
+                badge_time: "2–6 Weeks", badge_price: "Fixed Price", badge_tracking: "Tracking included",
+                hero_title: "B2B SaaS MVPs that generate leads — live in 2–6 weeks.",
+                hero_subtitle: "For DACH-based B2B SaaS (Seed–Series A): go live in 21 days with landing page + tracking + lead funnel. Fixed price after scope freeze.",
+                hero_why: "Founder-led, sales-first, no agency overhead — clear deliverables, fast execution.",
+                cta_book: "Book Call", cta_project: "Inquire Project", cta_book_short: "Book Call",
+                icp_yes_title: "Who this is for", icp_no_title: "Who this isn't for",
+                icp_yes_1: "B2B SaaS Seed–Series A needing pipeline in <60 days",
+                icp_yes_2: "Teams with a hypothesis but no engineering bandwidth",
+                icp_yes_3: "SMEs with measurable lead-gen needs (e.g., Consulting)",
+                icp_no_1: "B2C apps without a clear sales channel",
+                icp_no_2: "Projects without decision-maker access or budget",
+                icp_no_3: "Nice-to-have features without KPI focus",
+                risk_title: "De-risking your project", risk_1_h: "Scope in 48h", risk_1_t: "We define deliverables, timeline, and criteria precisely upfront.",
+                risk_2_h: "Fixed Price", risk_2_t: "No surprises. Changes are calculated as fair add-ons.",
+                risk_3_h: "Go/No-Go Week 1", risk_3_t: "After week one, we decide: are we a match? If not, we stop cleanly.",
+                pricing_title: "Clear Packages", pricing_sub: "Choose the foundation for your next stage.",
+                p1_title: "Corporate Website", p1_sub: "Online in days — without overhead.", p1_ideal: "Ideal for SME & Freelancers", p1_cta: "Inquire 999€ Website",
+                p1_not_1: "Copywriting", p1_not_2: "CRM Integration",
+                p2_title: "Sales Landing", p2_sub: "More demos through tracking.", p2_foerder: "Check: Funding possible*", p2_ideal: "Ideal for B2B Lead-Gen",
+                p2_not_1: "Ad Management",
+                p3_title: "MVP (Web-App)", p3_sub: "Live in 2–6 weeks.", p3_why: "Best price/value for SaaS validation.", p3_risk: "Fixed price after scope freeze.", p3_cta: "Book MVP-Call",
+                cases_title: "Case Studies", case_1_text: "Status: Manual reporting. Solution: Dashboard. Result: Real-time KPIs.",
+                faq_1_q: "Why 2–6 weeks?", faq_1_a: "We use AI-powered dev and proven building blocks.",
+                faq_2_q: "Scope Creep?", faq_2_a: "Fixed price after freeze. New ideas as fair add-ons.",
+                contact_title: "Request Project", f_name: "Name *", f_email: "Email *", f_company: "Company / Web", f_goal: "Project Goal",
+                opt_leads: "More Demo Requests", opt_mvp: "Build MVP", opt_auto: "Automation", opt_other: "Other",
+                f_budget: "Budget Range", f_deadline: "Deadline", f_msg: "Brief Description *", f_submit: "Send Request",
+                f_success: "Request sent successfully! We'll reply within < 24h.",
+                cal_title: "Direct Call", cal_desc: "Book a 30-min strategy session directly.", cta_cal: "Open Calendar",
+                imprint: "Imprint", privacy: "Privacy"
             }
         };
 
@@ -502,42 +451,27 @@
         }
         function toggleLang() { currentLang = currentLang === 'de' ? 'en' : 'de'; updateTexts(); }
 
-        // --- Darkmode & Themed Images Logic ---
         function applyThemedImages(theme) {
-            const imgs = document.querySelectorAll('[data-themed-img]');
-            imgs.forEach(img => {
-                const usage = img.getAttribute('data-usage');
-                const container = img.getAttribute('data-container');
-                const basePath = buildImgBasePath(theme, usage, container);
-                img.dataset.fallbackTried = "";
+            const baseUrl = new URL('.', window.location.href).toString();
+            document.querySelectorAll('[data-themed-img]').forEach(img => {
+                const basePath = `${baseUrl}img/${theme}.${img.dataset.usage}${img.dataset.container}`;
                 img.src = `${basePath}.webp`;
-                img.onerror = () => {
-                  if (img.dataset.fallbackTried !== "png") {
-                    img.dataset.fallbackTried = "png";
-                    img.src = `${basePath}.png`;
-                    return;
-                  }
-                  img.onerror = null;
-                  img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='1'%3E%3Crect width='18' height='18' x='3' y='3' rx='2' ry='2'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Cpath d='m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21'/%3E%3C/svg%3E";
-                };
+                img.onerror = () => { img.src = `${basePath}.png`; };
             });
         }
 
         function toggleTheme() {
-            const html = document.documentElement;
-            html.classList.toggle('dark');
-            const theme = html.classList.contains('dark') ? 'dark' : 'light';
+            const isDark = document.documentElement.classList.toggle('dark');
+            const theme = isDark ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
-            document.getElementById('theme-btn').innerText = theme === 'dark' ? '☀️' : '🌙';
+            document.getElementById('theme-btn').innerText = isDark ? '☀️' : '🌙';
             applyThemedImages(theme);
         }
 
         window.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme') || 'light';
-            if (savedTheme === 'dark') {
-                document.documentElement.classList.add('dark');
-                document.getElementById('theme-btn').innerText = '☀️';
-            }
+            if (savedTheme === 'dark') document.documentElement.classList.add('dark');
+            document.getElementById('theme-btn').innerText = savedTheme === 'dark' ? '☀️' : '🌙';
             applyThemedImages(savedTheme);
             updateTexts();
         });
@@ -551,24 +485,14 @@
 
     <!-- 
     SALES NOTES (On top):
-    - CTA-Logik: "Call buchen" (High-intent) bei MVP/Automation vs. "Anfragen" (Low-friction) bei Website/Hosting.
-    - Konsistenz: Website/Landing/MVP nutzen Fixpreise zur Risiko-Minimierung, Automation nutzt ab-Preis.
-    - Risiko-Reduktion: Klare Sätze zu Scope-Grenzen ("Erweiterungen optional") bei MVP integriert.
-    - Outcome-Sublines: Jedes Paket startet mit einem werte-basierten Versprechen statt technischer Features.
-    - Förder-Check Integration: Sauber formulierter Hinweis bei Sales-Landing, um Hürden zu senken.
-    - Featured MVP: Visuell durch Border & Shadow abgehoben, Begründung für Beliebtheit hinzugefügt.
-    - Hosting-Professionalität: 5 dedizierte Bullets mit konkreten Metriken (Retention, Uptime) schaffen Vertrauen.
-    - Nächste Iteration: Paket-FAQ Sektion unterhalb der Preise zur Einwandvorbehandlung.
-
-    ITERATION PROMPTS:
-    - „Pakete: Deliverables der AI-Pipeline schärfen (z.B. Integration von n8n, LangChain).“
-    - „Testimonials: Füge Maximilian M. Logo hinzu und verlinke den Case deutlicher.“
-
-    FUNKTIONSTEST:
-    1. Icons: AI Tooling (cog) und Growth (refresh) erscheinen korrekt. (OK)
-    2. Pakete: 5 Karten in korrekter Reihenfolge sichtbar. (OK)
-    3. i18n: Alle neuen Sublines und Hosting-Bullets wechseln die Sprache. (OK)
-    4. Theme: Featured-Card bleibt im Darkmode lesbar und hervorgehoben. (OK)
+    - ICP scharf auf "B2B SaaS DACH" positioniert.
+    - Value Prop: Live in 21 Tagen (Landing/Tracking/Funnel).
+    - Risikominimierung: "Scope in 48h", "Fixpreis", "Woche 1 Exit" prominent platziert.
+    - Pakete: 3 Stufen (Website / Sales Landing / MVP) mit klaren Preisen & Deliverables.
+    - "Not Included" Liste verhindert Scope-Creep & Erwartungskonflikte.
+    - Lead-Qualifizierung im Formular: Firma, Ziel, Budget, Deadline hinzugefügt.
+    - Funnel-Split: Warm Leads -> TidyCal / Cold Leads -> Formular.
+    - i18n: Systematisch korrigiert (DE/EN Keys matchen exakt).
     -->
 </body>
 </html>
