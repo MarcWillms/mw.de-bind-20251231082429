@@ -102,7 +102,7 @@
             <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" uk-grid>
                 <!-- Paket 1: Website -->
                 <div>
-                    <div class="uk-card uk-card-default price-card">
+                    <div class="uk-card price-card">
                         <h3 class="uk-text-bold" data-t="p1_title">Unternehmens-Website</h3>
                         <div class="uk-text-h3 uk-text-bold">999 €</div>
                         <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p1_sub">Professionell online – ohne Overhead.</p>
@@ -121,8 +121,7 @@
 
                 <!-- Paket 2: Sales Landing -->
                 <div>
-                    <div class="uk-card uk-card-default price-card">
-                        <div class="badge-foerder" data-t="p2_foerder">Check: Förderfähig möglich*</div>
+                    <div class="uk-card price-card">
                         <h3 class="uk-text-bold" data-t="p2_title">Sales-Landingpage</h3>
                         <div class="uk-text-h3 uk-text-bold">1.499 – 2.499 €</div>
                         <p class="uk-text-small uk-text-primary uk-text-bold" data-t="p2_sub">Mehr Demo-Requests durch Tracking.</p>
@@ -139,14 +138,14 @@
                     </div>
                 </div>
 
-                <!-- Paket 3: MVP -->
+                <!-- Paket 3: MVP (Featured) -->
                 <div>
-                    <div class="uk-card uk-card-primary price-card price-card-featured" style="background: var(--primary); color: white; border: none;">
-                        <div class="badge-foerder" style="background: white; color: var(--primary);" data-t="featured_badge">Most Popular</div>
-                        <h3 class="uk-text-bold" style="color: white !important" data-t="p3_title">MVP (Web-App)</h3>
-                        <div class="uk-text-h3 uk-text-bold" style="color: white !important">ab 7.999 €</div>
+                    <div class="uk-card price-card price-card-featured">
+                        <div class="badge-foerder" style="background: white; color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 10px; display: inline-block;" data-t="featured_badge">Most Popular</div>
+                        <h3 class="uk-text-bold" data-t="p3_title">MVP (Web-App)</h3>
+                        <div class="uk-text-h3 uk-text-bold">ab 7.999 €</div>
                         <p class="uk-text-small uk-text-bold" data-t="p3_sub">Go-to-Market in 2–6 Wochen.</p>
-                        <hr style="border-top-color: rgba(255,255,255,0.2)">
+                        <hr>
                         <ul class="uk-list uk-list-divider uk-text-small" data-t="p3_list">
                             <li>Fullstack Use-Case</li>
                             <li>Auth & Database</li>
@@ -154,7 +153,7 @@
                             <li>Timeline: 4–6 Wochen</li>
                         </ul>
                         <div class="uk-margin-auto-top">
-                            <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-default uk-width-1-1" style="background: white; color: var(--primary); border: none;">
+                            <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-default uk-width-1-1">
                                 <span uk-icon="calendar"></span> <span class="uk-margin-small-left" data-t="p3_cta">MVP-Call buchen</span>
                             </a>
                         </div>
@@ -162,36 +161,56 @@
                 </div>
             </div>
 
-            <!-- Optional Add-ons Section -->
+            <!-- Add-ons Section -->
             <div class="uk-margin-large-top">
-                <h3 class="uk-text-bold uk-text-center uk-margin-medium-bottom" data-t="addons_title">Optionale Add-ons & Maintenance</h3>
-                <div class="uk-grid-small uk-child-width-1-3@m uk-grid-match" uk-grid>
+                <h2 class="uk-text-center uk-text-bold uk-margin-large-bottom" data-t="addons_title">Optionale Add-ons & Maintenance</h2>
+                <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" uk-grid>
                     <div>
                         <div class="addon-card">
                             <div>
-                                <h4 class="uk-text-bold uk-margin-small-bottom" data-t="addon_grant_title">Förder-Check Plus</h4>
-                                <p class="uk-text-small" data-t="addon_grant_desc">Professionelle Prüfung der Fördermittel-Optionen.</p>
+                                <h4 class="addon-title" data-t="addon_grant_title">Förder-Check Plus</h4>
+                                <ul class="uk-list uk-text-small">
+                                    <li data-t="addon_grant_l1">Individuelle Programmsuche</li>
+                                    <li data-t="addon_grant_l2">Strategischer Projektzuschnitt</li>
+                                    <li data-t="addon_grant_l3">Begleitung bei Antragstellung</li>
+                                </ul>
                             </div>
-                            <div class="addon-price uk-margin-top" data-t="addon_grant_price">5% Aufschlag bei Erfolg*</div>
-                            <p class="uk-text-meta" style="font-size: 0.7rem;" data-t="addon_grant_meta">*Verrechnung nicht möglich.</p>
+                            <div class="uk-margin-top">
+                                <div class="addon-price" data-t="addon_grant_price">5% Aufschlag bei Erfolg*</div>
+                                <p class="uk-text-meta" style="font-size: 0.75rem" data-t="addon_grant_meta">*Verrechnung nicht möglich.</p>
+                            </div>
                         </div>
                     </div>
                     <div>
                         <div class="addon-card">
                             <div>
-                                <h4 class="uk-text-bold uk-margin-small-bottom" data-t="addon_retainer_title">SaaS Retainer</h4>
-                                <p class="uk-text-small" data-t="addon_retainer_desc">Aktualisierung, Optimierung & Support (bis zu 10h/Monat).</p>
+                                <h4 class="addon-title" data-t="addon_retainer_title">SaaS Retainer</h4>
+                                <ul class="uk-list uk-text-small">
+                                    <li data-t="addon_retainer_l1">Laufende Bugfixes & Updates</li>
+                                    <li data-t="addon_retainer_l2">Kleine Feature-Anpassungen</li>
+                                    <li data-t="addon_retainer_l3">Priority Support</li>
+                                </ul>
                             </div>
-                            <div class="addon-price uk-margin-top" data-t="addon_retainer_price">1.500 € / Monat</div>
+                            <div class="uk-margin-top">
+                                <div class="addon-price" data-t="addon_retainer_price">1.500 € / Monat</div>
+                                <p class="uk-text-meta" style="font-size: 0.75rem" data-t="addon_retainer_meta">Inkl. 10h Betreuung pro Monat.</p>
+                            </div>
                         </div>
                     </div>
                     <div>
                         <div class="addon-card">
                             <div>
-                                <h4 class="uk-text-bold uk-margin-small-bottom" data-t="addon_hosting_title">Managed Hosting</h4>
-                                <p class="uk-text-small" data-t="addon_hosting_desc">Individuelles Setup, Monitoring & Backups.</p>
+                                <h4 class="addon-title" data-t="addon_hosting_title">Managed Hosting</h4>
+                                <ul class="uk-list uk-text-small">
+                                    <li data-t="addon_hosting_l1">Daily Backups & Monitoring</li>
+                                    <li data-t="addon_hosting_l2">Security Hardening & SSL</li>
+                                    <li data-t="addon_hosting_l3">Skalierbare Infrastruktur</li>
+                                </ul>
                             </div>
-                            <div class="addon-price uk-margin-top" data-t="addon_hosting_price">ab 99 € / Monat</div>
+                            <div class="uk-margin-top">
+                                <div class="addon-price" data-t="addon_hosting_price">ab 99 € / Monat</div>
+                                <p class="uk-text-meta" style="font-size: 0.75rem" data-t="addon_hosting_meta">Individuell nach Workload.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,29 +218,8 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="uk-section mw-section mw-alt">
-        <div class="uk-container uk-container-small">
-            <h2 class="uk-text-center uk-text-bold uk-margin-large-bottom">FAQ</h2>
-            <ul uk-accordion>
-                <li>
-                    <a class="uk-accordion-title uk-text-bold" href="#" data-t="faq_1_q">Warum 2–6 Wochen?</a>
-                    <div class="uk-accordion-content" data-t="faq_1_a">
-                        Wir nutzen KI-gestützte Entwicklung und erprobte Softwaremodule. Statt das Rad neu zu erfinden, fokussieren wir uns auf Ihre Unique Value Proposition.
-                    </div>
-                </li>
-                <li>
-                    <a class="uk-accordion-title uk-text-bold" href="#" data-t="faq_2_q">Wer liefert die Texte & Assets?</a>
-                    <div class="uk-accordion-content" data-t="faq_2_a">
-                        Wir nutzen KI, um Texte und erste Designs schnell zu generieren. Für Premium-Copywriting oder Branding arbeiten wir mit Partnern zusammen.
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
     <!-- Kontakt -->
-    <section id="kontakt" class="uk-section mw-section">
+    <section id="kontakt" class="uk-section mw-section mw-alt">
         <div class="uk-container">
             <div class="uk-grid-large" uk-grid>
                 <div class="uk-width-2-3@m">
@@ -231,7 +229,7 @@
                             <div><label class="uk-form-label" data-t="f_name">Name *</label><input class="uk-input" type="text" id="name" required></div>
                             <div><label class="uk-form-label" data-t="f_email">E-Mail *</label><input class="uk-input" type="email" id="email" required></div>
                         </div>
-                        <div class="uk-margin">
+                        <div class=\"uk-margin\">
                             <label class="uk-form-label" data-t="f_msg">Kurzbeschreibung *</label>
                             <textarea class="uk-textarea" rows="4" id="message" required></textarea>
                         </div>
@@ -242,16 +240,12 @@
                         <p class="uk-text-bold" data-t="f_success">Anfrage erfolgreich gesendet! Wir melden uns in < 24h.</p>
                         <a href="https://tidycal.com/mpploym/30-minute-meeting" class="uk-button uk-button-primary uk-margin-small-top" data-t="cta_book">Direkt Termin buchen</a>
                     </div>
-                    
-                    <div id="contact-error" class="uk-alert-danger uk-margin-top" uk-alert>
-                        <p class="uk-text-bold" data-t="f_error">Ups! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder buchen Sie direkt einen Termin.</p>
-                    </div>
                 </div>
                 <div class="uk-width-1-3@m">
-                    <div class="uk-card uk-card-default uk-card-body feature-card">
+                    <div class="uk-card feature-card">
                         <h3 class="uk-text-bold" data-t="cal_title">Direkt-Call</h3>
                         <p class="uk-text-small" data-t="cal_desc">Keine Lust auf Formulare? Buchen Sie direkt 30 Min. für ein Strategiegespräch.</p>
-                        <a href="https://tidycal.com/mpploym/30-minute-meeting" target="_blank" class="uk-button uk-button-primary uk-button-large uk-width-1-1" onclick="handleBookingClick()">
+                        <a href="https://tidycal.com/mpploym/30-minute-meeting" target="_blank" class="uk-button uk-button-primary uk-button-large uk-width-1-1">
                             <span uk-icon="calendar"></span> <span class="uk-margin-small-left" data-t="cta_cal">Kalender öffnen</span>
                         </a>
                     </div>
@@ -261,9 +255,9 @@
     </section>
 
     <footer class="uk-section uk-section-secondary uk-padding-remove-bottom">
-        <div class="uk-container">
+        <div class=\"uk-container\">
             <div class="uk-text-center uk-padding uk-text-meta">
-                &copy; 2024 Software Studio. mw.de · <a href="#" data-t="imprint">Impressum</a> · <a href="#" data-t="privacy">Datenschutz</a>
+                &copy; 2024 Software Studio. mw.de · <a href="#">Impressum</a> · <a href="#">Datenschutz</a>
             </div>
         </div>
     </footer>
@@ -281,19 +275,15 @@
                 cta_book: "Termin buchen", cta_project: "Projekt anfragen", cta_book_short: "Termin buchen",
                 pricing_title: "Klare Pakete, volle Vergleichbarkeit", pricing_sub: "Wählen Sie das Fundament für Ihre nächste Ausbaustufe.",
                 p1_title: "Unternehmens-Website", p1_sub: "Professionell online – ohne Overhead.", p1_cta: "Anfragen",
-                p2_title: "Sales-Landingpage", p2_sub: "Mehr Demo-Requests durch Tracking.", p2_foerder: "Check: Förderfähig möglich*",
+                p2_title: "Sales-Landingpage", p2_sub: "Mehr Demo-Requests durch Tracking.",
                 p3_title: "MVP (Web-App)", p3_sub: "Go-to-Market in 2–6 Wochen.", p3_cta: "MVP-Call buchen",
                 addons_title: "Optionale Add-ons & Maintenance",
-                addon_grant_title: "Förder-Check Plus", addon_grant_desc: "Prüfung der Fördermittel-Optionen.", addon_grant_price: "5% Aufschlag bei Erfolg*", addon_grant_meta: "*Verrechnung nicht möglich.",
-                addon_retainer_title: "SaaS Retainer", addon_retainer_desc: "Aktualisierung & Support (bis zu 10h/Mon.).", addon_retainer_price: "1.500 € / Monat",
-                addon_hosting_title: "Managed Hosting", addon_hosting_desc: "Individuelles Setup & Backups.", addon_hosting_price: "ab 99 € / Monat",
-                faq_1_q: "Warum 2–6 Wochen?", faq_1_a: "Wir nutzen KI-gestützte Entwicklung und erprobte Module.",
-                faq_2_q: "Wer liefert die Texte?", faq_2_a: "Wir nutzen KI, um Texte und Designs schnell zu generieren.",
+                addon_grant_title: "Förder-Check Plus", addon_grant_l1: "Individuelle Programmsuche", addon_grant_l2: "Strategischer Projektzuschnitt", addon_grant_l3: "Begleitung bei Antragstellung", addon_grant_price: "5% Aufschlag bei Erfolg*", addon_grant_meta: "*Verrechnung nicht möglich.",
+                addon_retainer_title: "SaaS Retainer", addon_retainer_l1: "Laufende Bugfixes & Updates", addon_retainer_l2: "Kleine Feature-Anpassungen", addon_retainer_l3: "Priority Support", addon_retainer_price: "1.500 € / Monat", addon_retainer_meta: "Inkl. 10h Betreuung pro Monat.",
+                addon_hosting_title: "Managed Hosting", addon_hosting_l1: "Daily Backups & Monitoring", addon_hosting_l2: "Security Hardening & SSL", addon_hosting_l3: "Skalierbare Infrastruktur", addon_hosting_price: "ab 99 € / Monat", addon_hosting_meta: "Individuell nach Workload.",
                 contact_title: "Projekt anfragen", f_name: "Name *", f_email: "E-Mail *", f_msg: "Kurzbeschreibung *", f_submit: "Anfrage absenden",
                 f_success: "Anfrage erfolgreich gesendet! Wir melden uns in < 24h.",
-                f_error: "Ups! Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
-                cal_title: "Direkt-Call", cal_desc: "Buchen Sie direkt 30 Min. Strategiegespräch.", cta_cal: "Kalender öffnen",
-                imprint: "Impressum", privacy: "Datenschutz"
+                cal_title: "Direkt-Call", cal_desc: "Buchen Sie direkt 30 Min. Strategiegespräch.", cta_cal: "Kalender öffnen"
             },
             en: {
                 nav_services: "Services", nav_packages: "Packages", nav_cases: "Cases", nav_contact: "Contact",
@@ -303,19 +293,15 @@
                 cta_book: "Book Call", cta_project: "Inquire Project", cta_book_short: "Book Call",
                 pricing_title: "Clear Packages", pricing_sub: "Choose the foundation for your next stage.",
                 p1_title: "Corporate Website", p1_sub: "Professional online — without overhead.", p1_cta: "Inquire",
-                p2_title: "Sales Landing", p2_sub: "More demos through tracking.", p2_foerder: "Check: Funding possible*",
+                p2_title: "Sales Landing", p2_sub: "More demos through tracking.",
                 p3_title: "MVP (Web-App)", p3_sub: "Go-to-Market in 2–6 weeks.", p3_cta: "Book MVP-Call",
                 addons_title: "Optional Add-ons & Maintenance",
-                addon_grant_title: "Grant Check Plus", addon_grant_desc: "Professional audit of funding options.", addon_grant_price: "5% success fee*", addon_grant_meta: "*No offset possible.",
-                addon_retainer_title: "SaaS Retainer", addon_retainer_desc: "Updates, optimization & support (10h/mo).", addon_retainer_price: "1,500 € / month",
-                addon_hosting_title: "Managed Hosting", addon_hosting_desc: "Individual setup & backups.", addon_hosting_price: "from 99 € / month",
-                faq_1_q: "Why 2–6 weeks?", faq_1_a: "We use AI-powered dev and proven building blocks.",
-                faq_2_q: "Who provides copy?", faq_2_a: "We use AI to quickly generate texts and designs.",
-                contact_title: "Inquire Project", f_name: "Name *", f_email: "Email *", f_msg: "Brief Description *", f_submit: "Send Request",
+                addon_grant_title: "Grant Check Plus", addon_grant_l1: "Custom program search", addon_grant_l2: "Strategic project scoping", addon_grant_l3: "Support with application", addon_grant_price: "5% success fee*", addon_grant_meta: "*No offset possible.",
+                addon_retainer_title: "SaaS Retainer", addon_retainer_l1: "Ongoing bugfixes & updates", addon_retainer_l2: "Small feature adjustments", addon_retainer_l3: "Priority Support", addon_retainer_price: "1,500 € / month", addon_retainer_meta: "Incl. 10h support per month.",
+                addon_hosting_title: "Managed Hosting", addon_hosting_l1: "Daily Backups & Monitoring", addon_hosting_l2: "Security Hardening & SSL", addon_hosting_l3: "Scalable Infrastructure", addon_hosting_price: "from 99 € / month", addon_hosting_meta: "Individual based on workload.",
+                contact_title: "Inquire Project", f_name: "Name *", f_email: "Email *", f_msg: "Description *", f_submit: "Send Request",
                 f_success: "Request sent successfully! We'll reply within < 24h.",
-                f_error: "Oops! Something went wrong. Please try again.",
-                cal_title: "Direct Call", cal_desc: "Book a 30-min strategy session directly.", cta_cal: "Open Calendar",
-                imprint: "Imprint", privacy: "Privacy"
+                cal_title: "Direct Call", cal_desc: "Book a 30-min strategy session directly.", cta_cal: "Open Calendar"
             }
         };
 
@@ -329,54 +315,24 @@
         }
         function toggleLang() { currentLang = currentLang === 'de' ? 'en' : 'de'; updateTexts(); }
 
-        function applyThemedImages(theme) {
-            const baseUrl = new URL('.', window.location.href).toString();
-            document.querySelectorAll('[data-themed-img]').forEach(img => {
-                const basePath = `${baseUrl}img/${theme}.${img.dataset.usage}${img.dataset.container}`;
-                img.src = `${basePath}.webp`;
-                img.onerror = () => { img.src = `${basePath}.png`; };
-            });
-        }
-
         function toggleTheme() {
             const isDark = document.documentElement.classList.toggle('dark');
-            const theme = isDark ? 'dark' : 'light';
-            localStorage.setItem('theme', theme);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
             document.getElementById('theme-btn').innerText = isDark ? '☀️' : '🌙';
-            applyThemedImages(theme);
         }
 
         window.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme') || 'light';
             if (savedTheme === 'dark') document.documentElement.classList.add('dark');
             document.getElementById('theme-btn').innerText = savedTheme === 'dark' ? '☀️' : '🌙';
-            applyThemedImages(savedTheme);
             updateTexts();
         });
 
-        // Form Logic
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const form = this;
-            const successMsg = document.getElementById('contact-success');
-            const errorMsg = document.getElementById('contact-error');
-            try {
-                form.style.display = 'none';
-                successMsg.style.display = 'block';
-                errorMsg.style.display = 'none';
-                window.scrollTo({ top: form.offsetTop - 100, behavior: 'smooth' });
-            } catch (err) {
-                errorMsg.style.display = 'block';
-                successMsg.style.display = 'none';
-            }
+            this.style.display = 'none';
+            document.getElementById('contact-success').style.display = 'block';
         });
-
-        function handleBookingClick() {
-            const form = document.getElementById('contact-form');
-            const successMsg = document.getElementById('contact-success');
-            form.style.display = 'none';
-            successMsg.style.display = 'block';
-        }
     </script>
 </body>
 </html>

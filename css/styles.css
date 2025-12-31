@@ -16,14 +16,14 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark Mode Palette - Harmonized (No hard blacks/whites) */
+/* Dark Mode Palette - Harmonized */
 html.dark body {
-  --bg-odd: #0f172a;   /* Deep Slate */
-  --bg-even: #1e293b;  /* Slate-800 */
+  --bg-odd: #0f172a;
+  --bg-even: #1e293b;
   --nav-bg: rgba(15, 23, 42, 0.9);
 
-  --text-main: #f1f5f9;  /* Soft Slate White */
-  --text-muted: #94a3b8; /* Slate-400 */
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
 
   --card-bg: #1e293b;
   --card-border: rgba(255, 255, 255, 0.1);
@@ -38,14 +38,14 @@ body {
   line-height: 1.6;
 }
 
-/* Typography & Contrast Fixes */
-.uk-text-lead { font-weight: 400; color: var(--text-muted) !important; }
+/* Typography & Global Contrast Fixes */
+h1, h2, h3, h4, h5 { color: var(--text-main); font-weight: 800; letter-spacing: -0.02em; }
+.uk-text-lead { color: var(--text-muted) !important; }
 .uk-text-meta, .uk-text-small, .microcopy { color: var(--text-muted) !important; }
-h1, h2, h3, h4, h5 { color: var(--text-main) !important; font-weight: 800; letter-spacing: -0.02em; }
 
-/* Global Button Debugging for Darkmode */
+/* Global Button Logic */
 .uk-button { border-radius: 8px; font-weight: 700; text-transform: none; transition: var(--transition); }
-.uk-button-primary { background-color: var(--primary); color: #fff !important; border: none; }
+.uk-button-primary { background-color: var(--primary); color: #ffffff !important; border: none; }
 .uk-button-primary:hover { background-color: var(--primary-hover); transform: translateY(-2px); }
 
 .uk-button-default { 
@@ -53,15 +53,39 @@ h1, h2, h3, h4, h5 { color: var(--text-main) !important; font-weight: 800; lette
   color: var(--text-main) !important; 
   border: 1.5px solid var(--card-border); 
 }
-.uk-button-default:hover { 
-  background-color: var(--bg-even); 
-  border-color: var(--primary);
-  color: var(--primary) !important;
+
+/* Featured Card Force Colors (Light & Dark) */
+.price-card-featured {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 20px 40px rgba(0, 112, 243, 0.25);
+    transform: scale(1.03);
+}
+.price-card-featured h3, 
+.price-card-featured .uk-text-h3, 
+.price-card-featured p, 
+.price-card-featured li { 
+    color: #ffffff !important; 
+}
+.price-card-featured hr { border-top-color: rgba(255,255,255,0.2); }
+.price-card-featured .uk-button-default { 
+    background: #ffffff !important; 
+    color: var(--primary) !important; 
+    border: none !important; 
 }
 
-html.dark .uk-button-default {
-  border-color: rgba(255, 255, 255, 0.2);
+/* Addon Cards */
+.addon-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 30px;
+    border-radius: 16px;
+    transition: var(--transition);
 }
+.addon-card:hover { transform: translateY(-3px); border-color: var(--primary); }
+.addon-title { font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; }
+.addon-price { font-weight: 800; color: var(--primary); font-size: 1.2rem; }
 
 /* Navigation */
 .uk-navbar-container.sticky-nav { 
@@ -71,48 +95,18 @@ html.dark .uk-button-default {
 }
 html.dark .uk-navbar-nav > li > a { color: var(--text-main) !important; }
 
-/* Sections */
-.mw-section { background: var(--bg-odd); padding: 90px 0; }
-.mw-section.mw-alt { background: var(--bg-even); }
-
-/* Proof Badges */
-.proof-badge {
-    background: var(--bg-even);
-    border: 1px solid var(--card-border);
-    padding: 10px 18px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--text-main);
-}
-
-/* Cards */
-.feature-card, .price-card, .addon-card {
+/* Feature/Direct Call Card Debugging */
+.feature-card {
     background: var(--card-bg) !important;
     border: 1px solid var(--card-border);
     border-radius: 16px;
-    transition: var(--transition);
+    padding: 32px;
 }
+.feature-card h3, .feature-card p { color: var(--text-main) !important; }
 
-.price-card { padding: 40px !important; }
-.price-card-featured {
-    border: 2.5px solid var(--primary) !important;
-    box-shadow: 0 20px 40px rgba(0, 112, 243, 0.15);
-}
+/* Section Management */
+.mw-section { background: var(--bg-odd); padding: 100px 0; }
+.mw-section.mw-alt { background: var(--bg-even); }
 
-/* Addon specific */
-.addon-card {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.addon-price { font-size: 1.1rem; font-weight: 800; color: var(--primary); }
-
-/* Darkmode Contrast Fixes for UIkit elements */
-html.dark .uk-offcanvas-bar { background: var(--bg-odd); }
-html.dark .uk-accordion-title { color: var(--text-main) !important; }
-html.dark .uk-accordion-title::before { background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221.1%22%20points%3D%221%204%207%2010%2013%204%22%20%2F%3E%3C%2Fsvg%3E") !important; }
-
-/* Form Logic */
-#contact-success, #contact-error { display: none; }
+/* Alerts */
+#contact-success, #contact-error { display: none; margin-top: 20px; border-radius: 8px; font-weight: 600; }
